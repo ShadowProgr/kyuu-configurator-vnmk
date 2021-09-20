@@ -5,7 +5,7 @@ function updateRenders() {
         return;
     const layout = $("input[type='radio'][name='grp-layout']:checked").attr("id").replace("case-", "");
     const caseColor = $("input[type='radio'][name='grp-case-color']:checked").attr("id").replace("case-", "");
-    $(".configurator-viewer .render-bottom").attr("src", `https://raw.githubusercontent.com/ShadowProgr/kyuu-configurator/main/assets/case-bottom/${layout}-${caseColor}.png?raw=true`);
+    $(".configurator-viewer .render-bottom").attr("src", `https://raw.githubusercontent.com/ShadowProgr/kyuu-configurator/main/assets/case-bottom/${caseColor}.png?raw=true`);
     $(".configurator-viewer .render-top").attr("src", `https://raw.githubusercontent.com/ShadowProgr/kyuu-configurator/main/assets/case-top/${layout}-${caseColor}.png?raw=true`);
 
     // Badge
