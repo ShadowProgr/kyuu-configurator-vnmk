@@ -1,7 +1,7 @@
 function updateRenders() {
     // Case
-    if (!$("input[type='radio'][name='grp-layout']:checked").length
-            || !$("input[type='radio'][name='grp-case-color']:checked").length)
+    if (!$("input[type='radio'][name='grp-layout']:checked").length ||
+        !$("input[type='radio'][name='grp-case-color']:checked").length)
         return;
     const layout = $("input[type='radio'][name='grp-layout']:checked").attr("id").replace("case-", "");
     const caseColor = $("input[type='radio'][name='grp-case-color']:checked").attr("id").replace("case-", "");
@@ -15,8 +15,8 @@ function updateRenders() {
     $(".configurator-viewer .render-badge").attr("src", `https://raw.githubusercontent.com/ShadowProgr/kyuu-configurator/main/assets/badge/${badge}.png?raw=true`);
 
     // Weight
-    if (!$("input[type='radio'][name='grp-weight-style']:checked").length
-            || !$("input[type='radio'][name='grp-weight-color']:checked").length)
+    if (!$("input[type='radio'][name='grp-weight-style']:checked").length ||
+        !$("input[type='radio'][name='grp-weight-color']:checked").length)
         return;
     const weightStyle = $("input[type='radio'][name='grp-weight-style']:checked").attr("id");
     const weight = $("input[type='radio'][name='grp-weight-color']:checked").attr("id").replace("weight-", "");
@@ -41,19 +41,19 @@ function updateRenders() {
 };
 
 function isValidSelection() {
-    if (!$("input[type='radio'][name='grp-layout']:checked").length
-            || !$("input[type='radio'][name='grp-case-color']:checked").length
-            || !$("input[type='radio'][name='grp-badge-color']:checked").length
-            || !$("input[type='radio'][name='grp-weight-style']:checked").length
-            || !$("input[type='radio'][name='grp-weight-color']:checked").length
-            || !$("input[type='radio'][name='grp-plate-color']:checked").length) {
+    if (!$("input[type='radio'][name='grp-layout']:checked").length ||
+        !$("input[type='radio'][name='grp-case-color']:checked").length ||
+        !$("input[type='radio'][name='grp-badge-color']:checked").length ||
+        !$("input[type='radio'][name='grp-weight-style']:checked").length ||
+        !$("input[type='radio'][name='grp-weight-color']:checked").length ||
+        !$("input[type='radio'][name='grp-plate-color']:checked").length) {
         $(".price-number").text("N/A");
         return false;
     }
-    
+
     const weightStyle = $("input[type='radio'][name='grp-weight-style']:checked").attr("id");
-    if (weightStyle.includes("hybrid")
-            && !$("input[type='radio'][name='grp-subweight-color']:checked").length) {
+    if (weightStyle.includes("hybrid") &&
+        !$("input[type='radio'][name='grp-subweight-color']:checked").length) {
         $(".price-number").text("N/A");
         return false;
     }
@@ -67,7 +67,7 @@ function updatePrice() {
 
     let price = 0;
     let temp = "";
-    
+
     // Case
     const layout = $("input[type='radio'][name='grp-layout']:checked").attr("id").replace("case-", "");
     const caseColor = $("input[type='radio'][name='grp-case-color']:checked").attr("id").replace("case-", "");
@@ -124,8 +124,8 @@ function updatePrice() {
     temp += parseInt(prices[`${weightStyle}-${weightFinish}`]) + " ";
 
     // Subweight
-    if (weightStyle.includes("hybrid")
-            && $("input[type='radio'][name='grp-subweight-color']:checked").length) {
+    if (weightStyle.includes("hybrid") &&
+        $("input[type='radio'][name='grp-subweight-color']:checked").length) {
         const subweight = $("input[type='radio'][name='grp-subweight-color']:checked").attr("id").replace("subweight-", "");
 
         let subweightFinish = "";
@@ -139,7 +139,7 @@ function updatePrice() {
             subweightFinish = "pc";
         }
         price += parseInt(prices[`subweight-${subweightFinish}`]);
-        temp  += parseInt(prices[`subweight-${subweightFinish}`]) + " ";
+        temp += parseInt(prices[`subweight-${subweightFinish}`]) + " ";
     }
 
     // Plate
@@ -163,7 +163,7 @@ function updatePrice() {
 
     // PCB
     const pcb = $("input[type='radio'][name='grp-pcb']:checked").attr("id");
-    
+
     price += parseInt(prices[`${pcb}`]);
     temp += parseInt(prices[`${pcb}`]) + " ";
 
@@ -180,11 +180,11 @@ function getConfigString() {
     const badge = $("input[type='radio'][name='grp-badge-color']:checked").attr("id").replace("badge-", "");
     const weightStyle = $("input[type='radio'][name='grp-weight-style']:checked").attr("id");
     const weight = $("input[type='radio'][name='grp-weight-color']:checked").attr("id").replace("weight-", "");
-    
-    let configString = `Case: ${layout}-${caseColor}<br>Badge: ${badge}<br>Weight: ${weight}<br>`;
+
+    let configString = `Case: ${layout}-${caseColor}\<br>Badge: ${badge}\<br>Weight: ${weight}\<br>`;
     if (weightStyle.includes("hybrid")) {
         const subweight = $("input[type='radio'][name='grp-subweight-color']:checked").attr("id").replace("subweight-", "");
-        configString += `Subweight: ${subweight}<br>`;
+        configString += `Subweight: ${subweight}\<br>`;
     }
     const plate = $("input[type='radio'][name='grp-plate-color']:checked").attr("id").replace("plate-", "");
     configString += `Plate: ${plate}`;
@@ -192,8 +192,8 @@ function getConfigString() {
     return configString;
 };
 
-$(document).ready(function () {
-    $("input[name='grp-layout']").change(function () {
+$(document).ready(function() {
+    $("input[name='grp-layout']").change(function() {
         const id = $("input[type='radio'][name='grp-layout']:checked").attr("id");
 
         if (id.includes("crane") || id.includes("flower")) {
@@ -212,7 +212,7 @@ $(document).ready(function () {
         updatePrice();
     });
 
-    $("input[name='grp-case-material']").change(function () {
+    $("input[name='grp-case-material']").change(function() {
         const id = $("input[type='radio'][name='grp-case-material']:checked").attr("id");
 
         if (id.includes("alu")) {
@@ -229,12 +229,12 @@ $(document).ready(function () {
         updatePrice();
     });
 
-    $("input[name='grp-case-color']").change(function () {
+    $("input[name='grp-case-color']").change(function() {
         updateRenders();
         updatePrice();
     });
-    
-    $("input[name='grp-badge-material']").change(function () {
+
+    $("input[name='grp-badge-material']").change(function() {
         const id = $("input[type='radio'][name='grp-badge-material']:checked").attr("id");
 
         if (id.includes("alu")) {
@@ -257,12 +257,12 @@ $(document).ready(function () {
         updatePrice();
     });
 
-    $("input[name='grp-badge-color']").change(function () {
+    $("input[name='grp-badge-color']").change(function() {
         updateRenders();
         updatePrice();
     });
 
-    $("input[name='grp-weight-style']").change(function () {
+    $("input[name='grp-weight-style']").change(function() {
         const id = $("input[type='radio'][name='grp-weight-style']:checked").attr("id");
 
         if (id == "weight-regular") {
@@ -280,7 +280,7 @@ $(document).ready(function () {
         updatePrice();
     });
 
-    $("input[name='grp-weight-material']").change(function () {
+    $("input[name='grp-weight-material']").change(function() {
         const id = $("input[type='radio'][name='grp-weight-material']:checked").attr("id");
 
         if (id.includes("alu")) {
@@ -307,12 +307,12 @@ $(document).ready(function () {
         updatePrice();
     });
 
-    $("input[name='grp-weight-color']").change(function () {
+    $("input[name='grp-weight-color']").change(function() {
         updateRenders();
         updatePrice();
     });
 
-    $("input[name='grp-subweight-material']").change(function () {
+    $("input[name='grp-subweight-material']").change(function() {
         const id = $("input[type='radio'][name='grp-subweight-material']:checked").attr("id");
 
         if (id.includes("alu")) {
@@ -326,12 +326,12 @@ $(document).ready(function () {
         updatePrice();
     });
 
-    $("input[name='grp-subweight-color']").change(function () {
+    $("input[name='grp-subweight-color']").change(function() {
         updateRenders();
         updatePrice();
     });
 
-    $("input[name='grp-plate-material']").change(function () {
+    $("input[name='grp-plate-material']").change(function() {
         const id = $("input[type='radio'][name='grp-plate-material']:checked").attr("id");
 
         if (id.includes("alu")) {
@@ -354,14 +354,77 @@ $(document).ready(function () {
         updatePrice();
     });
 
-    $("input[name='grp-plate-color']").change(function () {
+    $("input[name='grp-plate-color']").change(function() {
         updateRenders();
         updatePrice();
     });
 
-    $("input[name='grp-pcb']").change(function () {
+    $("input[name='grp-pcb']").change(function() {
         updateRenders();
         updatePrice();
+    });
+
+    $("#my-form").submit(function(e) {
+        e.preventDefault();
+        var vnf_regex = /((09|03|07|08|05)+([0-9]{8})\b)/g;
+        if (vnf_regex.test($("#phone").val()) == false) {
+            alert("Số điện thoại không đúng");
+            return false;
+        }
+
+        $.ajax({
+            type: 'POST',
+            crossDomain: true,
+            contentType: 'application/json',
+            dataType: 'jsonp',
+            url: 'https://docs.google.com/forms/d/e/1FAIpQLScllOJiLhel6EFgLlpPz0n6EA2mOx8ptSvU4O9-6fZEFRG2ZQ/formResponse',
+            data: {
+                "entry.1238286296": $("#name").val(),
+                "entry.426016844": $("#phone").val(),
+                "entry.301433428": $("#fb").val(),
+                "entry.511429316": $("#address").val(),
+                "entry.924331765": $("#price").val(),
+                "entry.1059748155": $("#config").val(),
+            },
+            success: function(result) {
+                console.log(result);
+            },
+            error: function(result) {
+                console.log(result);
+                $("#form").fadeOut("fast", function() {
+                    $("#message .price").text($(".price-number").text() + "₫");
+                    $("#message").fadeIn("fast");
+                });
+            }
+        });
+        return false;
+    });
+
+    $(".open-form").on("click", function(e) {
+        if (isValidSelection()) {
+            $("#name").val("");
+            $("#phone").val("");
+            $("#fb").val("");
+            $("#address").val("");
+            $("#price").val("");
+            $("#config").val("");
+            $("#price-display").text($(".price-number").text() + "₫");
+            $("#config-display").html(getConfigString());
+
+            $("#price").val($(".price-number").text());
+            $("#config").val(getConfigString());
+            $("#form").fadeIn("fast");
+        } else {
+            alert("Vui lòng chọn đủ option");
+        }
+    });
+
+    $("#form .close-form").on("click", function(e) {
+        $("#form").fadeOut("fast");
+    });
+
+    $("#message .close-form").on("click", function(e) {
+        $("#message").fadeOut("fast");
     });
 
     $("input[name='grp-layout'][id='wkl']").prop("checked", true).change();
