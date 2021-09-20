@@ -392,7 +392,7 @@ $(document).ready(function() {
             error: function(result) {
                 console.log(result);
                 $("#form").fadeOut("fast", function() {
-                    $("#message .price").text($(".price-number").text() + "₫");
+                    $("#message .price").text($(".price-number").text() + " ₫");
                     $("#message").fadeIn("fast");
                 });
             }
@@ -408,7 +408,7 @@ $(document).ready(function() {
             $("#address").val("");
             $("#price").val("");
             $("#config").val("");
-            $("#price-display").text($(".price-number").text() + "₫");
+            $("#price-display").text($(".price-number").text() + " ₫");
             $("#config-display").html(getConfigString());
 
             $("#price").val($(".price-number").text());
