@@ -40,7 +40,7 @@ function updateRenders() {
     $(".configurator-viewer .render-plate").attr("src", `https://raw.githubusercontent.com/ShadowProgr/kyuu-configurator/main/assets/plate/${plate}.png?raw=true`);
 };
 
-function updatePrice() {
+function isValidSelection() {
     if (!$("input[type='radio'][name='grp-layout']:checked").length
             || !$("input[type='radio'][name='grp-case-color']:checked").length
             || !$("input[type='radio'][name='grp-badge-color']:checked").length
@@ -48,15 +48,22 @@ function updatePrice() {
             || !$("input[type='radio'][name='grp-weight-color']:checked").length
             || !$("input[type='radio'][name='grp-plate-color']:checked").length) {
         $(".price-number").text("N/A");
-        return;
+        return false;
     }
     
     const weightStyle = $("input[type='radio'][name='grp-weight-style']:checked").attr("id");
     if (weightStyle.includes("hybrid")
             && !$("input[type='radio'][name='grp-subweight-color']:checked").length) {
         $(".price-number").text("N/A");
-        return;
+        return false;
     }
+
+    return true;
+};
+
+function updatePrice() {
+    if (!isValidSelection())
+        return;
 
     let price = 0;
     let temp = "";
@@ -99,6 +106,7 @@ function updatePrice() {
     temp += parseInt(prices[`badge-${badgeFinish}`]) + " ";
 
     // Weight
+    const weightStyle = $("input[type='radio'][name='grp-weight-style']:checked").attr("id");
     const weight = $("input[type='radio'][name='grp-weight-color']:checked").attr("id").replace("weight-", "");
     let weightFinish = "";
     if (weight.includes("alu")) {
@@ -161,7 +169,28 @@ function updatePrice() {
 
     $(".price-number").text(price.toLocaleString(undefined));
     // $(".price-number").text(temp);
-}
+};
+
+function getConfigString() {
+    if (!isValidSelection())
+        return "";
+
+    const layout = $("input[type='radio'][name='grp-layout']:checked").attr("id").replace("case-", "");
+    const caseColor = $("input[type='radio'][name='grp-case-color']:checked").attr("id").replace("case-", "");
+    const badge = $("input[type='radio'][name='grp-badge-color']:checked").attr("id").replace("badge-", "");
+    const weightStyle = $("input[type='radio'][name='grp-weight-style']:checked").attr("id");
+    const weight = $("input[type='radio'][name='grp-weight-color']:checked").attr("id").replace("weight-", "");
+    
+    let configString = `Case: ${layout}-${caseColor}<br>Badge: ${badge}<br>Weight: ${weight}<br>`;
+    if (weightStyle.includes("hybrid")) {
+        const subweight = $("input[type='radio'][name='grp-subweight-color']:checked").attr("id").replace("subweight-", "");
+        configString += `Subweight: ${subweight}<br>`;
+    }
+    const plate = $("input[type='radio'][name='grp-plate-color']:checked").attr("id").replace("plate-", "");
+    configString += `Plate: ${plate}`;
+
+    return configString;
+};
 
 $(document).ready(function () {
     $("input[name='grp-layout']").change(function () {
