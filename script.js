@@ -11,7 +11,12 @@ function updateRenders() {
     // Badge
     if (!$("input[type='radio'][name='grp-badge-color']:checked").length)
         return;
-    const badge = $("input[type='radio'][name='grp-badge-color']:checked").attr("id").replace("badge-", "");
+    let badge = $("input[type='radio'][name='grp-badge-color']:checked").attr("id").replace("badge-", "");
+    if (layout.includes("crane")) {
+        badge = "brass-crane";
+    } else if (layout.includes("flower")) {
+        badge = "brass-flower";
+    }
     $(".configurator-viewer .render-badge").attr("src", `https://raw.githubusercontent.com/ShadowProgr/kyuu-configurator/main/assets/badge/${badge}.png?raw=true`);
 
     // Weight
@@ -39,6 +44,10 @@ function updateRenders() {
     const plate = $("input[type='radio'][name='grp-plate-color']:checked").attr("id").replace("plate-", "");
     $(".configurator-viewer .render-plate").attr("src", `https://raw.githubusercontent.com/ShadowProgr/kyuu-configurator/main/assets/plate/${plate}.png?raw=true`);
 };
+
+function uncheckHidden() {
+    $(".option-set span").filter(":hidden").find("input[type='radio']:checked").prop("checked", false);
+}
 
 function isValidSelection() {
     if (!$("input[type='radio'][name='grp-layout']:checked").length ||
@@ -89,9 +98,7 @@ function updatePrice() {
     // Badge
     const badge = $("input[type='radio'][name='grp-badge-color']:checked").attr("id").replace("badge-", "");
     let badgeFinish = "";
-    if (badge.includes("crane") || badge.includes("flower")) {
-        badgeFinish = "special";
-    } else if (badge.includes("alu")) {
+    if (badge.includes("alu")) {
         if (badge.includes("alu-e")) {
             badgeFinish = "alu-ecoat";
         } else {
@@ -101,6 +108,9 @@ function updatePrice() {
         badgeFinish = "pc";
     } else {
         badgeFinish = badge;
+    }
+    if (layout.includes("crane") || layout.includes("flower")) {
+        badgeFinish = "special";
     }
     price += parseInt(prices[`badge-${badgeFinish}`]);
     temp += parseInt(prices[`badge-${badgeFinish}`]) + " ";
@@ -199,6 +209,7 @@ $(document).ready(function() {
         if (id.includes("crane") || id.includes("flower")) {
             $(".grp-case-material span:not(.case-alu)").fadeOut("fast");
             $(".grp-badge-material span:not(.crane)").fadeOut("fast");
+            $(".grp-badge-color span:not(.crane)").fadeOut("fast");
         } else {
             $(".grp-case-material .case-pc").fadeIn("fast");
             $(".grp-badge-material .kyuu").fadeIn("fast");
@@ -245,7 +256,13 @@ $(document).ready(function() {
             $(".grp-badge-color .badge-pc-color").fadeIn("fast");
         } else if (id.includes("brass")) {
             $(".grp-badge-color span:not(.badge-brass-color)").fadeOut("fast");
-            $(".grp-badge-color .badge-brass-color").fadeIn("fast");
+
+            const layout = $("input[type='radio'][name='grp-layout']:checked").attr("id");
+            if (layout.includes("crane") || layout.includes("flower")) {
+                $(".grp-badge-color .crane").fadeIn("fast");
+            } else {
+                $(".grp-badge-color .badge-brass-color").fadeIn("fast");
+            }
         } else if (id.includes("copper")) {
             $(".grp-badge-color span:not(.badge-copper-color)").fadeOut("fast");
             $(".grp-badge-color .badge-copper-color").fadeIn("fast");
@@ -401,6 +418,7 @@ $(document).ready(function() {
     });
 
     $(".open-form").on("click", function(e) {
+        uncheckHidden();
         if (isValidSelection()) {
             $("#name").val("");
             $("#phone").val("");

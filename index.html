@@ -2,1026 +2,1037 @@
 <html>
 
 <head>
-    <title>Reset's Kyuu R2 Configurator</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="prices.js"></script>
-    <script type="text/javascript" src="script.js"></script>
+  <title>Reset's Kyuu R2 Configurator</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="prices.js"></script>
+  <script type="text/javascript" src="script.js"></script>
 </head>
 
 <body>
-    <!-- Other form -->
-    <div class="configurator container-fluid">
+  <!-- Other form -->
+  <div class="configurator container-fluid">
+    <div class="row">
+      <div class="col-12 col-md-5 configurator-options">
+        <div class="option-sets mh-100-vh overflow-auto">
+          <div class="option-set grp-layout">
+            <div class="option-set-header">
+              <h4>Layout</h4>
+            </div>
+            <span>
+              <input type="radio" class="btn-radio" name="grp-layout" id="wk">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="wk">
+                <div>Winkey</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span>
+              <input type="radio" class="btn-radio" name="grp-layout" id="wkl">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="wkl">
+                <div>Winkeyless</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span>
+              <input type="radio" class="btn-radio" name="grp-layout" id="wk-crane">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="wk-crane">
+                <div>Winkey (Crane)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span>
+              <input type="radio" class="btn-radio" name="grp-layout" id="wkl-crane">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="wkl-crane">
+                <div>Winkeyless (Crane)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span>
+              <input type="radio" class="btn-radio" name="grp-layout" id="wk-flower">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="wk-flower">
+                <div>Winkey (Flower)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span>
+              <input type="radio" class="btn-radio" name="grp-layout" id="wkl-flower">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="wkl-flower">
+                <div>Winkeyless (Flower)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+          </div>
+          <div class="option-set grp-case-material">
+            <div class="option-set-header">
+              <h4>Case Material</h4>
+            </div>
+            <span class="case-alu">
+              <input type="radio" class="btn-radio" name="grp-case-material" id="case-alu">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="case-alu">
+                <div>Aluminum</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="case-pc">
+              <input type="radio" class="btn-radio" name="grp-case-material" id="case-pc">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="case-pc">
+                <div>Polycarbonate</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="case-copper">
+              <input type="radio" class="btn-radio" name="grp-case-material" id="case-copper">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="case-copper">
+                <div>Copper</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+          </div>
+          <div class="option-set grp-case-color">
+            <div class="option-set-header">
+              <h4>Case Color & Finish</h4>
+            </div>
+            <span class="case-alu-color">
+              <input type="radio" class="btn-radio" name="grp-case-color" id="case-alu-eblack">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="case-alu-eblack">
+                <div>Black (E-Coated)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="case-alu-color">
+              <input type="radio" class="btn-radio" name="grp-case-color" id="case-alu-ewhite">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="case-alu-ewhite">
+                <div>White (E-Coated)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="case-alu-color">
+              <input type="radio" class="btn-radio" name="grp-case-color" id="case-alu-elilac">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="case-alu-elilac">
+                <div>Pastel Lilac (E-Coated)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="case-alu-color">
+              <input type="radio" class="btn-radio" name="grp-case-color" id="case-alu-raw">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="case-alu-raw">
+                <div>Raw (Clear Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="case-alu-color">
+              <input type="radio" class="btn-radio" name="grp-case-color" id="case-alu-rgold">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="case-alu-rgold">
+                <div>Rose Gold (Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="case-alu-color">
+              <input type="radio" class="btn-radio" name="grp-case-color" id="case-alu-red">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="case-alu-red">
+                <div>Red (Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="case-alu-color">
+              <input type="radio" class="btn-radio" name="grp-case-color" id="case-alu-maroon">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="case-alu-maroon">
+                <div>Maroon Banner (Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="case-alu-color">
+              <input type="radio" class="btn-radio" name="grp-case-color" id="case-alu-plum">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="case-alu-plum">
+                <div>Plum (Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="case-alu-color">
+              <input type="radio" class="btn-radio" name="grp-case-color" id="case-alu-pinkl">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="case-alu-pinkl">
+                <div>Pink Lady (Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="case-alu-color">
+              <input type="radio" class="btn-radio" name="grp-case-color" id="case-alu-navy">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="case-alu-navy">
+                <div>Navy Blue (Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="case-alu-color">
+              <input type="radio" class="btn-radio" name="grp-case-color" id="case-alu-bluejay">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="case-alu-bluejay">
+                <div>Baby Blue Jay (Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="case-pc-color">
+              <input type="radio" class="btn-radio" name="grp-case-color" id="case-pc-frosted">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="case-pc-frosted">
+                <div>Frosted</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="case-pc-color">
+              <input type="radio" class="btn-radio" name="grp-case-color" id="case-pc-rgold">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="case-pc-rgold">
+                <div>Rose Gold (Dyed)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="case-pc-color">
+              <input type="radio" class="btn-radio" name="grp-case-color" id="case-pc-lilac">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="case-pc-lilac">
+                <div>Pastel Lilac (Dyed)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="case-pc-color">
+              <input type="radio" class="btn-radio" name="grp-case-color" id="case-pc-plum">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="case-pc-plum">
+                <div>Plum (Dyed)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="case-pc-color">
+              <input type="radio" class="btn-radio" name="grp-case-color" id="case-pc-bluejay">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="case-pc-bluejay">
+                <div>Baby Blue Jay (Dyed)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="case-copper-color">
+              <input type="radio" class="btn-radio" name="grp-case-color" id="case-copper-sand">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="case-copper-sand">
+                <div>Sandblasted</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="case-copper-color">
+              <input type="radio" class="btn-radio" name="grp-case-color" id="case-copper-polish">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="case-copper-polish">
+                <div>Polished</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+          </div>
+          <div class="option-set grp-badge-material">
+            <div class="option-set-header">
+              <h4>Badge Material</h4>
+            </div>
+            <span class="kyuu">
+              <input type="radio" class="btn-radio" name="grp-badge-material" id="badge-alu">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="badge-alu">
+                <div>Aluminum</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="kyuu">
+              <input type="radio" class="btn-radio" name="grp-badge-material" id="badge-pc">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="badge-pc">
+                <div>Polycarbonate</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="kyuu crane flower">
+              <input type="radio" class="btn-radio" name="grp-badge-material" id="badge-brass">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="badge-brass">
+                <div>Brass</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="kyuu">
+              <input type="radio" class="btn-radio" name="grp-badge-material" id="badge-copper">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="badge-copper">
+                <div>Copper</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="kyuu">
+              <input type="radio" class="btn-radio" name="grp-badge-material" id="badge-ss">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="badge-ss">
+                <div>Stainless Steel</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+          </div>
+          <div class="option-set grp-badge-color">
+            <div class="option-set-header">
+              <h4>Badge Color & Finish</h4>
+            </div>
+            <span class="badge-alu-color">
+              <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-alu-eblack">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="badge-alu-eblack">
+                <div>Black (E-Coated)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="badge-alu-color">
+              <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-alu-ewhite">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="badge-alu-ewhite">
+                <div>White (E-Coated)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="badge-alu-color">
+              <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-alu-elilac">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="badge-alu-elilac">
+                <div>Pastel Lilac (E-Coated)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="badge-alu-color">
+              <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-alu-raw">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="badge-alu-raw">
+                <div>Raw (Clear Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="badge-alu-color">
+              <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-alu-rgold">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="badge-alu-rgold">
+                <div>Rose Gold (Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="badge-alu-color">
+              <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-alu-red">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="badge-alu-red">
+                <div>Red (Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="badge-alu-color">
+              <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-alu-maroon">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="badge-alu-maroon">
+                <div>Maroon Banner (Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="badge-alu-color">
+              <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-alu-plum">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="badge-alu-plum">
+                <div>Plum (Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="badge-alu-color">
+              <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-alu-pinkl">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="badge-alu-pinkl">
+                <div>Pink Lady (Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="badge-alu-color">
+              <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-alu-navy">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="badge-alu-navy">
+                <div>Navy Blue (Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="badge-alu-color">
+              <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-alu-bluejay">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="badge-alu-bluejay">
+                <div>Baby Blue Jay (Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="badge-pc-color">
+              <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-pc-frosted">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="badge-pc-frosted">
+                <div>Frosted</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="badge-pc-color">
+              <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-pc-rgold">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="badge-pc-rgold">
+                <div>Rose Gold (Dyed)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="badge-pc-color">
+              <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-pc-lilac">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="badge-pc-lilac">
+                <div>Pastel Lilac (Dyed)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="badge-pc-color">
+              <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-pc-plum">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="badge-pc-plum">
+                <div>Plum (Dyed)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="badge-pc-color">
+              <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-pc-bluejay">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="badge-pc-bluejay">
+                <div>Baby Blue Jay (Dyed)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="badge-copper-color">
+              <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-copper-sand">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="badge-copper-sand">
+                <div>Sandblasted</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="badge-copper-color">
+              <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-copper-polish">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="badge-copper-polish">
+                <div>Polished</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="badge-brass-color">
+              <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-brass-sand">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="badge-brass-sand">
+                <div>Sandblasted</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="badge-brass-color crane flower">
+              <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-brass-pvd">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="badge-brass-pvd">
+                <div>Polished & PVD</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="badge-ss-color">
+              <input type="radio" class="btn-radio" name="grp-badge-color" id="ss-polish">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="ss-polish">
+                <div>Polished</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+          </div>
+          <div class="option-set grp-weight-style">
+            <div class="option-set-header">
+              <h4>Weight Style</h4>
+            </div>
+            <span>
+              <input type="radio" class="btn-radio" name="grp-weight-style" id="weight-regular">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="weight-regular">
+                <div>Regular</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span>
+              <input type="radio" class="btn-radio" name="grp-weight-style" id="weight-hybrid">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="weight-hybrid">
+                <div>Hybrid</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+          </div>
+          <div class="option-set grp-weight-material">
+            <div class="option-set-header">
+              <h4>Weight Material</h4>
+            </div>
+            <span>
+              <input type="radio" class="btn-radio" name="grp-weight-material" id="weight-alu">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="weight-alu">
+                <div>Aluminum</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span>
+              <input type="radio" class="btn-radio" name="grp-weight-material" id="weight-pc">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="weight-pc">
+                <div>Polycarbonate</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span>
+              <input type="radio" class="btn-radio" name="grp-weight-material" id="weight-brass">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="weight-brass">
+                <div>Brass</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span>
+              <input type="radio" class="btn-radio" name="grp-weight-material" id="weight-copper">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="weight-copper">
+                <div>Copper</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span>
+              <input type="radio" class="btn-radio" name="grp-weight-material" id="weight-ss">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="weight-ss">
+                <div>Stainless Steel</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+          </div>
+          <div class="option-set grp-weight-color">
+            <div class="option-set-header">
+              <h4>Weight Color & Finish</h4>
+            </div>
+            <span class="weight-alu-color">
+              <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-alu-eblack">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="weight-alu-eblack">
+                <div>Black (E-Coated)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="weight-alu-color">
+              <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-alu-ewhite">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="weight-alu-ewhite">
+                <div>White (E-Coated)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="weight-alu-color">
+              <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-alu-elilac">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="weight-alu-elilac">
+                <div>Pastel Lilac (E-Coated)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="weight-alu-color">
+              <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-alu-raw">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="weight-alu-raw">
+                <div>Raw (Clear Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="weight-alu-color">
+              <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-alu-rgold">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="weight-alu-rgold">
+                <div>Rose Gold (Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="weight-alu-color">
+              <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-alu-red">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="weight-alu-red">
+                <div>Red (Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="weight-alu-color">
+              <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-alu-maroon">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="weight-alu-maroon">
+                <div>Maroon Banner (Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="weight-alu-color">
+              <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-alu-plum">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="weight-alu-plum">
+                <div>Plum (Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="weight-alu-color">
+              <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-alu-pinkl">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="weight-alu-pinkl">
+                <div>Pink Lady (Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="weight-alu-color">
+              <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-alu-navy">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="weight-alu-navy">
+                <div>Navy Blue (Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="weight-alu-color">
+              <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-alu-bluejay">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="weight-alu-bluejay">
+                <div>Baby Blue Jay (Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="weight-pc-color">
+              <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-pc-frosted">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="weight-pc-frosted">
+                <div>Frosted</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="weight-pc-color">
+              <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-pc-rgold">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="weight-pc-rgold">
+                <div>Rose Gold (Dyed)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="weight-pc-color">
+              <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-pc-lilac">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="weight-pc-lilac">
+                <div>Pastel Lilac (Dyed)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="weight-pc-color">
+              <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-pc-plum">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="weight-pc-plum">
+                <div>Plum (Dyed)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="weight-pc-color">
+              <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-pc-bluejay">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="weight-pc-bluejay">
+                <div>Baby Blue Jay (Dyed)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="weight-copper-color">
+              <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-copper-sand">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="weight-copper-sand">
+                <div>Sandblasted</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="weight-copper-color">
+              <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-copper-polish">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="weight-copper-polish">
+                <div>Polished</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="weight-brass-color">
+              <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-brass-sand">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="weight-brass-sand">
+                <div>Sandblasted</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="weight-brass-color">
+              <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-brass-pvd">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="weight-brass-pvd">
+                <div>Polished & PVD</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="weight-brass-color weight-hybrid-color">
+              <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-brass-bpvd">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="weight-brass-bpvd">
+                <div>Polished & Black PVD</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="weight-ss-color">
+              <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-ss-polish">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="weight-ss-polish">
+                <div>Polished</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+          </div>
+          <div class="option-set grp-subweight-material">
+            <div class="option-set-header">
+              <h4>Sub-weight Material</h4>
+            </div>
+            <span>
+              <input type="radio" class="btn-radio" name="grp-subweight-material" id="subweight-alu">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="subweight-alu">
+                <div>Aluminum</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span>
+              <input type="radio" class="btn-radio" name="grp-subweight-material" id="subweight-pc">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="subweight-pc">
+                <div>Polycarbonate</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+          </div>
+          <div class="option-set grp-subweight-color">
+            <div class="option-set-header">
+              <h4>Sub-weight Color & Finish</h4>
+            </div>
+            <span class="subweight-alu-color">
+              <input type="radio" class="btn-radio" name="grp-subweight-color" id="subweight-alu-eblack">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="subweight-alu-eblack">
+                <div>Black (E-Coated)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="subweight-alu-color">
+              <input type="radio" class="btn-radio" name="grp-subweight-color" id="subweight-alu-ewhite">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="subweight-alu-ewhite">
+                <div>White (E-Coated)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="subweight-alu-color">
+              <input type="radio" class="btn-radio" name="grp-subweight-color" id="subweight-alu-elilac">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="subweight-alu-elilac">
+                <div>Pastel Lilac (E-Coated)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="subweight-alu-color">
+              <input type="radio" class="btn-radio" name="grp-subweight-color" id="subweight-alu-raw">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="subweight-alu-raw">
+                <div>Raw (Clear Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="subweight-alu-color">
+              <input type="radio" class="btn-radio" name="grp-subweight-color" id="subweight-alu-rgold">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="subweight-alu-rgold">
+                <div>Rose Gold (Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="subweight-alu-color">
+              <input type="radio" class="btn-radio" name="grp-subweight-color" id="subweight-alu-red">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="subweight-alu-red">
+                <div>Red (Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="subweight-alu-color">
+              <input type="radio" class="btn-radio" name="grp-subweight-color" id="subweight-alu-maroon">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="subweight-alu-maroon">
+                <div>Maroon Banner (Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="subweight-alu-color">
+              <input type="radio" class="btn-radio" name="grp-subweight-color" id="subweight-alu-plum">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="subweight-alu-plum">
+                <div>Plum (Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="subweight-alu-color">
+              <input type="radio" class="btn-radio" name="grp-subweight-color" id="subweight-alu-pinkl">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="subweight-alu-pinkl">
+                <div>Pink Lady (Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="subweight-alu-color">
+              <input type="radio" class="btn-radio" name="grp-subweight-color" id="subweight-alu-navy">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="subweight-alu-navy">
+                <div>Navy Blue (Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="subweight-alu-color">
+              <input type="radio" class="btn-radio" name="grp-subweight-color" id="subweight-alu-bluejay">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="subweight-alu-bluejay">
+                <div>Baby Blue Jay (Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="subweight-pc-color">
+              <input type="radio" class="btn-radio" name="grp-subweight-color" id="subweight-pc-frosted">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="subweight-pc-frosted">
+                <div>Frosted</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="subweight-pc-color">
+              <input type="radio" class="btn-radio" name="grp-subweight-color" id="subweight-pc-rgold">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="subweight-pc-rgold">
+                <div>Rose Gold (Dyed)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="subweight-pc-color">
+              <input type="radio" class="btn-radio" name="grp-subweight-color" id="subweight-pc-lilac">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="subweight-pc-lilac">
+                <div>Pastel Lilac (Dyed)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="subweight-pc-color">
+              <input type="radio" class="btn-radio" name="grp-subweight-color" id="subweight-pc-plum">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="subweight-pc-plum">
+                <div>Plum (Dyed)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="subweight-pc-color">
+              <input type="radio" class="btn-radio" name="grp-subweight-color" id="subweight-pc-bluejay">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="subweight-pc-bluejay">
+                <div>Baby Blue Jay (Dyed)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+          </div>
+          <div class="option-set grp-plate-material">
+            <div class="option-set-header">
+              <h4>Plate Material</h4>
+            </div>
+            <span>
+              <input type="radio" class="btn-radio" name="grp-plate-material" id="plate-alu">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="plate-alu">
+                <div>Aluminum</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span>
+              <input type="radio" class="btn-radio" name="grp-plate-material" id="plate-pc">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="plate-pc">
+                <div>Polycarbonate</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span>
+              <input type="radio" class="btn-radio" name="grp-plate-material" id="plate-pom">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="plate-pom">
+                <div>POM</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span>
+              <input type="radio" class="btn-radio" name="grp-plate-material" id="plate-brass">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="plate-brass">
+                <div>Brass</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span>
+              <input type="radio" class="btn-radio" name="grp-plate-material" id="plate-copper">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="plate-copper">
+                <div>Copper</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+          </div>
+          <div class="option-set grp-plate-color">
+            <div class="option-set-header">
+              <h4>Plate Color & Finish</h4>
+            </div>
+            <span class="plate-alu-color">
+              <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-alu-eblack">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="plate-alu-eblack">
+                <div>Black (E-Coated)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="plate-alu-color">
+              <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-alu-ewhite">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="plate-alu-ewhite">
+                <div>White (E-Coated)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="plate-alu-color">
+              <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-alu-elilac">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="plate-alu-elilac">
+                <div>Pastel Lilac (E-Coated)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="plate-alu-color">
+              <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-alu-raw">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="plate-alu-raw">
+                <div>Raw (Clear Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="plate-alu-color">
+              <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-alu-rgold">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="plate-alu-rgold">
+                <div>Rose Gold (Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="plate-alu-color">
+              <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-alu-red">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="plate-alu-red">
+                <div>Red (Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="plate-alu-color">
+              <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-alu-maroon">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="plate-alu-maroon">
+                <div>Maroon Banner (Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="plate-alu-color">
+              <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-alu-plum">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="plate-alu-plum">
+                <div>Plum (Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="plate-alu-color">
+              <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-alu-pinkl">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="plate-alu-pinkl">
+                <div>Pink Lady (Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="plate-alu-color">
+              <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-alu-navy">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="plate-alu-navy">
+                <div>Navy Blue (Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="plate-alu-color">
+              <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-alu-bluejay">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="plate-alu-bluejay">
+                <div>Baby Blue Jay (Anodized)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="plate-pc-color">
+              <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-pc-frosted">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="plate-pc-frosted">
+                <div>Frosted</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="plate-pc-color">
+              <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-pc-rgold">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="plate-pc-rgold">
+                <div>Rose Gold (Dyed)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="plate-pc-color">
+              <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-pc-lilac">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="plate-pc-lilac">
+                <div>Pastel Lilac (Dyed)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="plate-pc-color">
+              <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-pc-plum">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="plate-pc-plum">
+                <div>Plum (Dyed)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="plate-pc-color">
+              <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-pc-bluejay">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="plate-pc-bluejay">
+                <div>Baby Blue Jay (Dyed)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="plate-copper-color">
+              <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-copper-sand">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="plate-copper-sand">
+                <div>Sandblasted</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="plate-copper-color">
+              <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-copper-polish">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="plate-copper-polish">
+                <div>Polished</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="plate-brass-color">
+              <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-brass-sand">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="plate-brass-sand">
+                <div>Sandblasted</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="plate-brass-color">
+              <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-brass-pvd">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="plate-brass-pvd">
+                <div>Polished & PVD</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="plate-brass-color">
+              <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-brass-bpvd">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="plate-brass-bpvd">
+                <div>Polished & Black PVD</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="plate-pom-color">
+              <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-pom-black">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="plate-pom-black">
+                <div>Black</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span class="plate-pom-color">
+              <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-pom-white">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="plate-pom-white">
+                <div>White</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+          </div>
+          <div class="option-set grp-pcb">
+            <div class="option-set-header">
+              <h4>PCB</h4>
+            </div>
+            <span>
+              <input type="radio" class="btn-radio" name="grp-pcb" id="pcb-solder">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="pcb-solder">
+                <div>Mechlovin' 9 (Solder)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+            <span>
+              <input type="radio" class="btn-radio" name="grp-pcb" id="pcb-hotswap">
+              <label class="btn btn-outline-secondary me-2 mb-2" for="pcb-hotswap">
+                <div>Hermit Ape (Hotswap)</div>
+              </label class="btn btn-outline-secondary me-2 mb-2">
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-7">
+        <div class="d-flex h-25 justify-content-center align-items-center">
+          <div class="heading text-center">
+            <h1 style="letter-spacing: 2px;">
+              <span>Reset's Kyuu R2</span>
+            </h1>
+            <p class="text-muted">
+              Thông tin chi tiết trên <a href="https://www.facebook.com/groups/vnmkmarket/posts/1425122714550137/"
+                target="_blank">Chợ bàn phím cơ Việt Nam</a>.
+            </p>
+          </div>
+        </div>
+
+        <div class="h-50 justify-content-center align-items-center d-flex">
+          <div id="carouselExampleIndicators" class="carousel slide" data-interval="false">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="configurator-viewer">
+                  <img
+                    src="https://raw.githubusercontent.com/ShadowProgr/kyuu-configurator/main/assets/background/background.png?raw=true" />
+                  <img src="assets/case-bottom/alu-eblack.png" class="layer render-bottom" />
+                  <img src="assets/weight-hybrid/alu-ewhite.png" class="layer render-weight" />
+                  <img src="assets/subweight/alu-eblack.png" class="layer render-subweight" />
+                  <img src="assets/plate/alu-ewhite.png" class="layer render-plate" />
+                  <img src="assets/badge/alu-ewhite.png" class="layer render-badge" />
+                  <img src="assets/case-top/alu-eblack.png" class="layer render-top" />
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="configurator-viewer">
+                  <img
+                    src="https://raw.githubusercontent.com/ShadowProgr/kyuu-configurator/main/assets/background/background.png?raw=true" />
+                  <img src="assets/case-bottom/alu-eblack.png" class="layer render-bottom" />
+                  <img src="assets/weight-hybrid/alu-ewhite.png" class="layer render-weight" />
+                  <img src="assets/subweight/alu-eblack.png" class="layer render-subweight" />
+                  <img src="assets/plate/alu-ewhite.png" class="layer render-plate" />
+                  <img src="assets/badge/alu-ewhite.png" class="layer render-badge" />
+                  <img src="assets/case-top/alu-eblack.png" class="layer render-top" />
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="configurator-viewer">
+                  <img
+                    src="https://raw.githubusercontent.com/ShadowProgr/kyuu-configurator/main/assets/background/background.png?raw=true" />
+                  <img src="assets/case-bottom/alu-eblack.png" class="layer render-bottom" />
+                  <img src="assets/weight-hybrid/alu-ewhite.png" class="layer render-weight" />
+                  <img src="assets/subweight/alu-eblack.png" class="layer render-subweight" />
+                  <img src="assets/plate/alu-ewhite.png" class="layer render-plate" />
+                  <img src="assets/badge/alu-ewhite.png" class="layer render-badge" />
+                  <img src="assets/case-top/alu-eblack.png" class="layer render-top" />
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+        <div class="align-items-center d-flex font-1-5 justify-content-center h-25 flex-column">
+          <div class="price text-center">
+            <span class="price-text text-uppercase font-weight-bold">Giá: </span>
+            <span class="price-number font-italic">100.000.000</span>
+            <span class="price-currency font-italic"> ₫</span>
+          </div>
+          <button class="btn open-form">Đặt mua</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pop-up form -->
+  <div id="form" class="form-popup">
+    <div class="container form-wrapper">
+      <button class="close-form">Close</button>
+      <form id="my-form"
+        action="https://docs.google.com/forms/d/e/1FAIpQLScllOJiLhel6EFgLlpPz0n6EA2mOx8ptSvU4O9-6fZEFRG2ZQ/formResponse"
+        method="POST">
         <div class="row">
-            <div class="col-12 col-md-5 configurator-options">
-                <div class="option-sets mh-100-vh overflow-auto">
-                    <div class="option-set grp-layout">
-                        <div class="option-set-header">
-                            <h4>Layout</h4>
-                        </div>
-                        <span>
-                <input type="radio" class="btn-radio" name="grp-layout" id="wk">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="wk">
-                  <div>Winkey</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span>
-                <input type="radio" class="btn-radio" name="grp-layout" id="wkl">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="wkl">
-                  <div>Winkeyless</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span>
-                <input type="radio" class="btn-radio" name="grp-layout" id="wk-crane">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="wk-crane">
-                  <div>Winkey (Crane)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span>
-                <input type="radio" class="btn-radio" name="grp-layout" id="wkl-crane">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="wkl-crane">
-                  <div>Winkeyless (Crane)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span>
-                <input type="radio" class="btn-radio" name="grp-layout" id="wk-flower">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="wk-flower">
-                  <div>Winkey (Flower)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span>
-                <input type="radio" class="btn-radio" name="grp-layout" id="wkl-flower">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="wkl-flower">
-                  <div>Winkeyless (Flower)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                    </div>
-                    <div class="option-set grp-case-material">
-                        <div class="option-set-header">
-                            <h4>Case Material</h4>
-                        </div>
-                        <span class="case-alu">
-                <input type="radio" class="btn-radio" name="grp-case-material" id="case-alu">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="case-alu">
-                  <div>Aluminum</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="case-pc">
-                <input type="radio" class="btn-radio" name="grp-case-material" id="case-pc">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="case-pc">
-                  <div>Polycarbonate</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="case-copper">
-                <input type="radio" class="btn-radio" name="grp-case-material" id="case-copper">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="case-copper">
-                  <div>Copper</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                    </div>
-                    <div class="option-set grp-case-color">
-                        <div class="option-set-header">
-                            <h4>Case Color & Finish</h4>
-                        </div>
-                        <span class="case-alu-color">
-                <input type="radio" class="btn-radio" name="grp-case-color" id="case-alu-eblack">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="case-alu-eblack"> 
-                  <div>Black (E-Coated)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="case-alu-color">
-                <input type="radio" class="btn-radio" name="grp-case-color" id="case-alu-ewhite">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="case-alu-ewhite">
-                  <div>White (E-Coated)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="case-alu-color">
-                <input type="radio" class="btn-radio" name="grp-case-color" id="case-alu-elilac">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="case-alu-elilac">
-                  <div>Pastel Lilac (E-Coated)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="case-alu-color">
-                <input type="radio" class="btn-radio" name="grp-case-color" id="case-alu-raw">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="case-alu-raw">
-                  <div>Raw (Clear Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="case-alu-color">
-                <input type="radio" class="btn-radio" name="grp-case-color" id="case-alu-rgold">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="case-alu-rgold">
-                  <div>Rose Gold (Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="case-alu-color">
-                <input type="radio" class="btn-radio" name="grp-case-color" id="case-alu-red">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="case-alu-red">
-                  <div>Red (Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="case-alu-color">
-                <input type="radio" class="btn-radio" name="grp-case-color" id="case-alu-maroon">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="case-alu-maroon">
-                  <div>Maroon Banner (Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="case-alu-color">
-                <input type="radio" class="btn-radio" name="grp-case-color" id="case-alu-plum">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="case-alu-plum">
-                  <div>Plum (Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="case-alu-color">
-                <input type="radio" class="btn-radio" name="grp-case-color" id="case-alu-pinkl">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="case-alu-pinkl">
-                  <div>Pink Lady (Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="case-alu-color">
-                <input type="radio" class="btn-radio" name="grp-case-color" id="case-alu-navy">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="case-alu-navy">
-                  <div>Navy Blue (Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="case-alu-color">
-                <input type="radio" class="btn-radio" name="grp-case-color" id="case-alu-bluejay">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="case-alu-bluejay">
-                  <div>Baby Blue Jay (Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="case-pc-color">
-                <input type="radio" class="btn-radio" name="grp-case-color" id="case-pc-frosted">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="case-pc-frosted">
-                  <div>Frosted</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="case-pc-color">
-                <input type="radio" class="btn-radio" name="grp-case-color" id="case-pc-rgold">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="case-pc-rgold">
-                  <div>Rose Gold (Dyed)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="case-pc-color">
-                <input type="radio" class="btn-radio" name="grp-case-color" id="case-pc-lilac">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="case-pc-lilac">
-                  <div>Pastel Lilac (Dyed)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="case-pc-color">
-                <input type="radio" class="btn-radio" name="grp-case-color" id="case-pc-plum">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="case-pc-plum">
-                  <div>Plum (Dyed)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="case-pc-color">
-                <input type="radio" class="btn-radio" name="grp-case-color" id="case-pc-bluejay">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="case-pc-bluejay">
-                  <div>Baby Blue Jay (Dyed)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="case-copper-color">
-                <input type="radio" class="btn-radio" name="grp-case-color" id="case-copper-sand">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="case-copper-sand">
-                  <div>Sandblasted</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="case-copper-color">
-                <input type="radio" class="btn-radio" name="grp-case-color" id="case-copper-polish">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="case-copper-polish">
-                  <div>Polished</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                    </div>
-                    <div class="option-set grp-badge-material">
-                        <div class="option-set-header">
-                            <h4>Badge Material</h4>
-                        </div>
-                        <span class="kyuu">
-                <input type="radio" class="btn-radio" name="grp-badge-material" id="badge-alu">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="badge-alu">
-                  <div>Aluminum</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="kyuu">
-                <input type="radio" class="btn-radio" name="grp-badge-material" id="badge-pc">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="badge-pc">
-                  <div>Polycarbonate</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="kyuu crane flower">
-                <input type="radio" class="btn-radio" name="grp-badge-material" id="badge-brass">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="badge-brass">
-                  <div>Brass</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="kyuu">
-                <input type="radio" class="btn-radio" name="grp-badge-material" id="badge-copper">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="badge-copper">
-                  <div>Copper</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="kyuu">
-                <input type="radio" class="btn-radio" name="grp-badge-material" id="badge-ss">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="badge-ss">
-                  <div>Stainless Steel</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                    </div>
-                    <div class="option-set grp-badge-color">
-                        <div class="option-set-header">
-                            <h4>Badge Color & Finish</h4>
-                        </div>
-                        <span class="badge-alu-color">
-                <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-alu-eblack">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="badge-alu-eblack"> 
-                  <div>Black (E-Coated)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="badge-alu-color">
-                <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-alu-ewhite">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="badge-alu-ewhite">
-                  <div>White (E-Coated)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="badge-alu-color">
-                <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-alu-elilac">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="badge-alu-elilac">
-                  <div>Pastel Lilac (E-Coated)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="badge-alu-color">
-                <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-alu-raw">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="badge-alu-raw">
-                  <div>Raw (Clear Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="badge-alu-color">
-                <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-alu-rgold">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="badge-alu-rgold">
-                  <div>Rose Gold (Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="badge-alu-color">
-                <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-alu-red">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="badge-alu-red">
-                  <div>Red (Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="badge-alu-color">
-                <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-alu-maroon">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="badge-alu-maroon">
-                  <div>Maroon Banner (Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="badge-alu-color">
-                <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-alu-plum">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="badge-alu-plum">
-                  <div>Plum (Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="badge-alu-color">
-                <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-alu-pinkl">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="badge-alu-pinkl">
-                  <div>Pink Lady (Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="badge-alu-color">
-                <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-alu-navy">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="badge-alu-navy">
-                  <div>Navy Blue (Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="badge-alu-color">
-                <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-alu-bluejay">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="badge-alu-bluejay">
-                  <div>Baby Blue Jay (Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="badge-pc-color">
-                <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-pc-frosted">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="badge-pc-frosted">
-                  <div>Frosted</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="badge-pc-color">
-                <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-pc-rgold">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="badge-pc-rgold">
-                  <div>Rose Gold (Dyed)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="badge-pc-color">
-                <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-pc-lilac">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="badge-pc-lilac">
-                  <div>Pastel Lilac (Dyed)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="badge-pc-color">
-                <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-pc-plum">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="badge-pc-plum">
-                  <div>Plum (Dyed)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="badge-pc-color">
-                <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-pc-bluejay">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="badge-pc-bluejay">
-                  <div>Baby Blue Jay (Dyed)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="badge-copper-color">
-                <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-copper-sand">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="badge-copper-sand">
-                  <div>Sandblasted</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="badge-copper-color">
-                <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-copper-polish">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="badge-copper-polish">
-                  <div>Polished</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="badge-brass-color">
-                <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-brass-sand">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="badge-brass-sand">
-                  <div>Sandblasted</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="badge-brass-color">
-                <input type="radio" class="btn-radio" name="grp-badge-color" id="badge-brass-pvd">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="badge-brass-pvd">
-                  <div>Polished & PVD</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="badge-ss-color">
-                <input type="radio" class="btn-radio" name="grp-badge-color" id="ss-polish">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="ss-polish">
-                  <div>Polished</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                    </div>
-                    <div class="option-set grp-weight-style">
-                        <div class="option-set-header">
-                            <h4>Weight Style</h4>
-                        </div>
-                        <span>
-                <input type="radio" class="btn-radio" name="grp-weight-style" id="weight-regular">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="weight-regular">
-                  <div>Regular</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span>
-                <input type="radio" class="btn-radio" name="grp-weight-style" id="weight-hybrid">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="weight-hybrid">
-                  <div>Hybrid</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                    </div>
-                    <div class="option-set grp-weight-material">
-                        <div class="option-set-header">
-                            <h4>Weight Material</h4>
-                        </div>
-                        <span>
-                <input type="radio" class="btn-radio" name="grp-weight-material" id="weight-alu">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="weight-alu">
-                  <div>Aluminum</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span>
-                <input type="radio" class="btn-radio" name="grp-weight-material" id="weight-pc">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="weight-pc">
-                  <div>Polycarbonate</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span>
-                <input type="radio" class="btn-radio" name="grp-weight-material" id="weight-brass">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="weight-brass">
-                  <div>Brass</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span>
-                <input type="radio" class="btn-radio" name="grp-weight-material" id="weight-copper">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="weight-copper">
-                  <div>Copper</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span>
-                <input type="radio" class="btn-radio" name="grp-weight-material" id="weight-ss">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="weight-ss">
-                  <div>Stainless Steel</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                    </div>
-                    <div class="option-set grp-weight-color">
-                        <div class="option-set-header">
-                            <h4>Weight Color & Finish</h4>
-                        </div>
-                        <span class="weight-alu-color">
-                <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-alu-eblack">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="weight-alu-eblack"> 
-                  <div>Black (E-Coated)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="weight-alu-color">
-                <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-alu-ewhite">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="weight-alu-ewhite">
-                  <div>White (E-Coated)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="weight-alu-color">
-                <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-alu-elilac">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="weight-alu-elilac">
-                  <div>Pastel Lilac (E-Coated)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="weight-alu-color">
-                <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-alu-raw">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="weight-alu-raw">
-                  <div>Raw (Clear Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="weight-alu-color">
-                <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-alu-rgold">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="weight-alu-rgold">
-                  <div>Rose Gold (Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="weight-alu-color">
-                <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-alu-red">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="weight-alu-red">
-                  <div>Red (Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="weight-alu-color">
-                <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-alu-maroon">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="weight-alu-maroon">
-                  <div>Maroon Banner (Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="weight-alu-color">
-                <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-alu-plum">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="weight-alu-plum">
-                  <div>Plum (Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="weight-alu-color">
-                <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-alu-pinkl">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="weight-alu-pinkl">
-                  <div>Pink Lady (Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="weight-alu-color">
-                <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-alu-navy">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="weight-alu-navy">
-                  <div>Navy Blue (Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="weight-alu-color">
-                <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-alu-bluejay">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="weight-alu-bluejay">
-                  <div>Baby Blue Jay (Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="weight-pc-color">
-                <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-pc-frosted">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="weight-pc-frosted">
-                  <div>Frosted</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="weight-pc-color">
-                <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-pc-rgold">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="weight-pc-rgold">
-                  <div>Rose Gold (Dyed)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="weight-pc-color">
-                <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-pc-lilac">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="weight-pc-lilac">
-                  <div>Pastel Lilac (Dyed)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="weight-pc-color">
-                <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-pc-plum">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="weight-pc-plum">
-                  <div>Plum (Dyed)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="weight-pc-color">
-                <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-pc-bluejay">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="weight-pc-bluejay">
-                  <div>Baby Blue Jay (Dyed)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="weight-copper-color">
-                <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-copper-sand">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="weight-copper-sand">
-                  <div>Sandblasted</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="weight-copper-color">
-                <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-copper-polish">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="weight-copper-polish">
-                  <div>Polished</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="weight-brass-color">
-                <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-brass-sand">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="weight-brass-sand">
-                  <div>Sandblasted</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="weight-brass-color">
-                <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-brass-pvd">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="weight-brass-pvd">
-                  <div>Polished & PVD</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="weight-brass-color weight-hybrid-color">
-                <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-brass-bpvd">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="weight-brass-bpvd">
-                  <div>Polished & Black PVD</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="weight-ss-color">
-                <input type="radio" class="btn-radio" name="grp-weight-color" id="weight-ss-polish">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="weight-ss-polish">
-                  <div>Polished</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                    </div>
-                    <div class="option-set grp-subweight-material">
-                        <div class="option-set-header">
-                            <h4>Sub-weight Material</h4>
-                        </div>
-                        <span>
-                <input type="radio" class="btn-radio" name="grp-subweight-material" id="subweight-alu">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="subweight-alu">
-                  <div>Aluminum</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span>
-                <input type="radio" class="btn-radio" name="grp-subweight-material" id="subweight-pc">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="subweight-pc">
-                  <div>Polycarbonate</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                    </div>
-                    <div class="option-set grp-subweight-color">
-                        <div class="option-set-header">
-                            <h4>Sub-weight Color & Finish</h4>
-                        </div>
-                        <span class="subweight-alu-color">
-                <input type="radio" class="btn-radio" name="grp-subweight-color" id="subweight-alu-eblack">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="subweight-alu-eblack"> 
-                  <div>Black (E-Coated)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="subweight-alu-color">
-                <input type="radio" class="btn-radio" name="grp-subweight-color" id="subweight-alu-ewhite">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="subweight-alu-ewhite">
-                  <div>White (E-Coated)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="subweight-alu-color">
-                <input type="radio" class="btn-radio" name="grp-subweight-color" id="subweight-alu-elilac">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="subweight-alu-elilac">
-                  <div>Pastel Lilac (E-Coated)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="subweight-alu-color">
-                <input type="radio" class="btn-radio" name="grp-subweight-color" id="subweight-alu-raw">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="subweight-alu-raw">
-                  <div>Raw (Clear Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="subweight-alu-color">
-                <input type="radio" class="btn-radio" name="grp-subweight-color" id="subweight-alu-rgold">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="subweight-alu-rgold">
-                  <div>Rose Gold (Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="subweight-alu-color">
-                <input type="radio" class="btn-radio" name="grp-subweight-color" id="subweight-alu-red">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="subweight-alu-red">
-                  <div>Red (Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="subweight-alu-color">
-                <input type="radio" class="btn-radio" name="grp-subweight-color" id="subweight-alu-maroon">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="subweight-alu-maroon">
-                  <div>Maroon Banner (Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="subweight-alu-color">
-                <input type="radio" class="btn-radio" name="grp-subweight-color" id="subweight-alu-plum">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="subweight-alu-plum">
-                  <div>Plum (Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="subweight-alu-color">
-                <input type="radio" class="btn-radio" name="grp-subweight-color" id="subweight-alu-pinkl">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="subweight-alu-pinkl">
-                  <div>Pink Lady (Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="subweight-alu-color">
-                <input type="radio" class="btn-radio" name="grp-subweight-color" id="subweight-alu-navy">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="subweight-alu-navy">
-                  <div>Navy Blue (Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="subweight-alu-color">
-                <input type="radio" class="btn-radio" name="grp-subweight-color" id="subweight-alu-bluejay">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="subweight-alu-bluejay">
-                  <div>Baby Blue Jay (Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="subweight-pc-color">
-                <input type="radio" class="btn-radio" name="grp-subweight-color" id="subweight-pc-frosted">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="subweight-pc-frosted">
-                  <div>Frosted</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="subweight-pc-color">
-                <input type="radio" class="btn-radio" name="grp-subweight-color" id="subweight-pc-rgold">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="subweight-pc-rgold">
-                  <div>Rose Gold (Dyed)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="subweight-pc-color">
-                <input type="radio" class="btn-radio" name="grp-subweight-color" id="subweight-pc-lilac">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="subweight-pc-lilac">
-                  <div>Pastel Lilac (Dyed)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="subweight-pc-color">
-                <input type="radio" class="btn-radio" name="grp-subweight-color" id="subweight-pc-plum">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="subweight-pc-plum">
-                  <div>Plum (Dyed)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="subweight-pc-color">
-                <input type="radio" class="btn-radio" name="grp-subweight-color" id="subweight-pc-bluejay">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="subweight-pc-bluejay">
-                  <div>Baby Blue Jay (Dyed)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                    </div>
-                    <div class="option-set grp-plate-material">
-                        <div class="option-set-header">
-                            <h4>Plate Material</h4>
-                        </div>
-                        <span>
-                <input type="radio" class="btn-radio" name="grp-plate-material" id="plate-alu">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="plate-alu">
-                  <div>Aluminum</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span>
-                <input type="radio" class="btn-radio" name="grp-plate-material" id="plate-pc">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="plate-pc">
-                  <div>Polycarbonate</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span>
-                <input type="radio" class="btn-radio" name="grp-plate-material" id="plate-pom">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="plate-pom">
-                  <div>POM</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span>
-                <input type="radio" class="btn-radio" name="grp-plate-material" id="plate-brass">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="plate-brass">
-                  <div>Brass</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span>
-                <input type="radio" class="btn-radio" name="grp-plate-material" id="plate-copper">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="plate-copper">
-                  <div>Copper</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                    </div>
-                    <div class="option-set grp-plate-color">
-                        <div class="option-set-header">
-                            <h4>Plate Color & Finish</h4>
-                        </div>
-                        <span class="plate-alu-color">
-                <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-alu-eblack">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="plate-alu-eblack"> 
-                  <div>Black (E-Coated)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="plate-alu-color">
-                <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-alu-ewhite">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="plate-alu-ewhite">
-                  <div>White (E-Coated)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="plate-alu-color">
-                <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-alu-elilac">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="plate-alu-elilac">
-                  <div>Pastel Lilac (E-Coated)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="plate-alu-color">
-                <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-alu-raw">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="plate-alu-raw">
-                  <div>Raw (Clear Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="plate-alu-color">
-                <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-alu-rgold">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="plate-alu-rgold">
-                  <div>Rose Gold (Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="plate-alu-color">
-                <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-alu-red">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="plate-alu-red">
-                  <div>Red (Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="plate-alu-color">
-                <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-alu-maroon">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="plate-alu-maroon">
-                  <div>Maroon Banner (Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="plate-alu-color">
-                <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-alu-plum">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="plate-alu-plum">
-                  <div>Plum (Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="plate-alu-color">
-                <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-alu-pinkl">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="plate-alu-pinkl">
-                  <div>Pink Lady (Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="plate-alu-color">
-                <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-alu-navy">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="plate-alu-navy">
-                  <div>Navy Blue (Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="plate-alu-color">
-                <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-alu-bluejay">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="plate-alu-bluejay">
-                  <div>Baby Blue Jay (Anodized)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="plate-pc-color">
-                <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-pc-frosted">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="plate-pc-frosted">
-                  <div>Frosted</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="plate-pc-color">
-                <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-pc-rgold">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="plate-pc-rgold">
-                  <div>Rose Gold (Dyed)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="plate-pc-color">
-                <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-pc-lilac">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="plate-pc-lilac">
-                  <div>Pastel Lilac (Dyed)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="plate-pc-color">
-                <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-pc-plum">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="plate-pc-plum">
-                  <div>Plum (Dyed)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="plate-pc-color">
-                <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-pc-bluejay">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="plate-pc-bluejay">
-                  <div>Baby Blue Jay (Dyed)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="plate-copper-color">
-                <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-copper-sand">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="plate-copper-sand">
-                  <div>Sandblasted</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="plate-copper-color">
-                <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-copper-polish">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="plate-copper-polish">
-                  <div>Polished</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="plate-brass-color">
-                <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-brass-sand">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="plate-brass-sand">
-                  <div>Sandblasted</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="plate-brass-color">
-                <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-brass-pvd">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="plate-brass-pvd">
-                  <div>Polished & PVD</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="plate-brass-color">
-                <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-brass-bpvd">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="plate-brass-bpvd">
-                  <div>Polished & Black PVD</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="plate-pom-color">
-                <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-pom-black">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="plate-pom-black">
-                  <div>Black</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span class="plate-pom-color">
-                <input type="radio" class="btn-radio" name="grp-plate-color" id="plate-pom-white">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="plate-pom-white">
-                  <div>White</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                    </div>
-                    <div class="option-set grp-pcb">
-                        <div class="option-set-header">
-                            <h4>PCB</h4>
-                        </div>
-                        <span>
-                <input type="radio" class="btn-radio" name="grp-pcb" id="pcb-solder">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="pcb-solder">
-                  <div>Mechlovin' 9 (Solder)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                        <span>
-                <input type="radio" class="btn-radio" name="grp-pcb" id="pcb-hotswap">
-                <label class="btn btn-outline-secondary me-2 mb-2" for="pcb-hotswap">
-                  <div>Hermit Ape (Hotswap)</div>
-                </label class="btn btn-outline-secondary me-2 mb-2">
-              </span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-7">
-                <div class="d-flex h-25 justify-content-center align-items-center">
-                    <div class="heading text-center">
-                        <h1 style="letter-spacing: 2px;">
-                            <span>Reset's Kyuu R2</span>
-                        </h1>
-                        <p class="text-muted">
-                            Thông tin chi tiết trên <a href="https://www.facebook.com/groups/vnmkmarket/posts/1425122714550137/" target="_blank">Chợ bàn phím cơ Việt Nam</a>.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="h-50 justify-content-center align-items-center d-flex">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-interval="false">
-                        <ol class="carousel-indicators">
-                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="configurator-viewer">
-                                    <img src="https://raw.githubusercontent.com/ShadowProgr/kyuu-configurator/main/assets/background/background.png?raw=true" />
-                                    <img src="assets/case-bottom/alu-eblack.png" class="layer render-bottom" />
-                                    <img src="assets/weight-hybrid/alu-ewhite.png" class="layer render-weight" />
-                                    <img src="assets/subweight/alu-eblack.png" class="layer render-subweight" />
-                                    <img src="assets/plate/alu-ewhite.png" class="layer render-plate" />
-                                    <img src="assets/badge/alu-ewhite.png" class="layer render-badge" />
-                                    <img src="assets/case-top/alu-eblack.png" class="layer render-top" />
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="configurator-viewer">
-                                    <img src="https://raw.githubusercontent.com/ShadowProgr/kyuu-configurator/main/assets/background/background.png?raw=true" />
-                                    <img src="assets/case-bottom/alu-eblack.png" class="layer render-bottom" />
-                                    <img src="assets/weight-hybrid/alu-ewhite.png" class="layer render-weight" />
-                                    <img src="assets/subweight/alu-eblack.png" class="layer render-subweight" />
-                                    <img src="assets/plate/alu-ewhite.png" class="layer render-plate" />
-                                    <img src="assets/badge/alu-ewhite.png" class="layer render-badge" />
-                                    <img src="assets/case-top/alu-eblack.png" class="layer render-top" />
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="configurator-viewer">
-                                    <img src="https://raw.githubusercontent.com/ShadowProgr/kyuu-configurator/main/assets/background/background.png?raw=true" />
-                                    <img src="assets/case-bottom/alu-eblack.png" class="layer render-bottom" />
-                                    <img src="assets/weight-hybrid/alu-ewhite.png" class="layer render-weight" />
-                                    <img src="assets/subweight/alu-eblack.png" class="layer render-subweight" />
-                                    <img src="assets/plate/alu-ewhite.png" class="layer render-plate" />
-                                    <img src="assets/badge/alu-ewhite.png" class="layer render-badge" />
-                                    <img src="assets/case-top/alu-eblack.png" class="layer render-top" />
-                                </div>
-                            </div>
-                        </div>
-                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="align-items-center d-flex font-1-5 justify-content-center h-25 flex-column">
-                    <div class="price text-center">
-                        <span class="price-text text-uppercase font-weight-bold">Giá: </span>
-                        <span class="price-number font-italic">100.000.000</span>
-                        <span class="price-currency font-italic"> ₫</span>
-                    </div>
-                    <button class="btn open-form">Đặt mua</button>
-                </div>
-            </div>
+          <div class="col-md-12 text-center">
+            <h1 class="form-title">[GB] Reset's Kyuu R2 - VNMK</h1>
+          </div>
         </div>
-    </div>
-
-    <!-- Pop-up form -->
-    <div id="form" class="form-popup">
-        <div class="container form-wrapper">
-            <button class="close-form">Close</button>
-            <form id="my-form" action="https://docs.google.com/forms/d/e/1FAIpQLScllOJiLhel6EFgLlpPz0n6EA2mOx8ptSvU4O9-6fZEFRG2ZQ/formResponse" method="POST">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h1 class="form-title">[GB] Reset's Kyuu R2 - VNMK</h1>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="form-group col-md-6">
-                        <label for="name">Họ và Tên</label>
-                        <input type="text" class="form-control" id="name" name="entry.1238286296" required="">
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="phone">SĐT</label>
-                        <input type="text" class="form-control" id="phone" name="entry.426016844" required="">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="form-group col-md-12">
-                        <label for="fb">Link Facebook</label>
-                        <input type="text" class="form-control" id="fb" name="entry.301433428" required="">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="form-group col-md-12">
-                        <label for="address">Địa chỉ giao hàng</label>
-                        <input type="text" class="form-control" id="address" name="entry.511429316" required="">
-                    </div>
-                </div>
-                <div class="row px-15-px">
-                    <div class="w-100 bg-light-grey">
-                        <div class="col-md-12 p-2">
-                            <div id="config-display" class="font-italic"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row px-15-px">
-                    <div class="w-100 bg-grey justify-content-end d-flex p-2">
-                        <div id="price-display" class="font-weight-bold text-white"></div>
-                    </div>
-                </div>
-                <input type="hidden" class="form-control" id="price" name="entry.1059748155" required="" readonly>
-                <input type="hidden" class="form-control" id="config" name="entry.924331765" required="" readonly>
-                <button type="submit" id="submit-btn" class="btn send-form">Đặt</button>
-            </form>
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label for="name">Họ và Tên</label>
+            <input type="text" class="form-control" id="name" name="entry.1238286296" required="">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="phone">SĐT</label>
+            <input type="text" class="form-control" id="phone" name="entry.426016844" required="">
+          </div>
         </div>
-    </div>
-
-    <!-- Pop-up message -->
-    <div id="message" class="form-popup">
-        <div class="container form-wrapper">
-            <button class="close-form">Close</button>
-            <div class="price text-center font-3">
-            </div>
-            <div class="bank-info">
-              Các bạn vui lòng chuyển khoản cho mình vào 1 trong 2 tài khoản sau<br>
-              <br>
-              <b>Tiên Phong Bank (TPBank)</b><br>
-              0045 0894 001<br>
-              Vương Viết Hoàng<br>
-              Chi nhánh Phạm Hùng - Hà Nội<br>
-              <br>
-              <b>Viettelpay</b><br>
-              097 111 94 86<br>
-              Vương Viết Hoàng<br>
-              <br>
-              Nội dung: <b>SDT + GB Kyuu</b><br>
-              Ví dụ: 0971119468 GB Kyuu<br>
-              <br>
-              Thanh toán xong các bạn chụp màn hình lại và gửi qua Facebook Messenger cho mình để xác nhận.<br>
-              <br>
-              Mọi thắc mắc xin liên hệ:<br>
-              Hoàng<br>
-              097 111 94 86 (cold line)<br>
-              <a href="https://www.facebook.com/ShadowProgr/" target="_blank">Facebook</a>
-            </div>
+        <div class="row">
+          <div class="form-group col-md-12">
+            <label for="fb">Link Facebook</label>
+            <input type="text" class="form-control" id="fb" name="entry.301433428" required="">
+          </div>
         </div>
+        <div class="row">
+          <div class="form-group col-md-12">
+            <label for="address">Địa chỉ giao hàng</label>
+            <input type="text" class="form-control" id="address" name="entry.511429316" required="">
+          </div>
+        </div>
+        <div class="row px-15-px">
+          <div class="w-100 bg-light-grey">
+            <div class="col-md-12 p-2">
+              <div id="config-display" class="font-italic"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row px-15-px">
+          <div class="w-100 bg-grey justify-content-end d-flex p-2">
+            <div id="price-display" class="font-weight-bold text-white"></div>
+          </div>
+        </div>
+        <input type="hidden" class="form-control" id="price" name="entry.1059748155" required="" readonly>
+        <input type="hidden" class="form-control" id="config" name="entry.924331765" required="" readonly>
+        <button type="submit" id="submit-btn" class="btn send-form">Đặt</button>
+      </form>
     </div>
+  </div>
+
+  <!-- Pop-up message -->
+  <div id="message" class="form-popup">
+    <div class="container form-wrapper">
+      <button class="close-form">Close</button>
+      <div class="price text-center font-3">
+      </div>
+      <div class="bank-info">
+        Các bạn vui lòng chuyển khoản cho mình vào 1 trong 2 tài khoản sau<br>
+        <br>
+        <b>Tiên Phong Bank (TPBank)</b><br>
+        0045 0894 001<br>
+        Vương Viết Hoàng<br>
+        Chi nhánh Phạm Hùng - Hà Nội<br>
+        <br>
+        <b>Viettelpay</b><br>
+        097 111 94 86<br>
+        Vương Viết Hoàng<br>
+        <br>
+        Nội dung: <b>SDT + GB Kyuu</b><br>
+        Ví dụ: 0971119468 GB Kyuu<br>
+        <br>
+        Thanh toán xong các bạn chụp màn hình lại và gửi qua Facebook Messenger cho mình để xác nhận.<br>
+        <br>
+        Mọi thắc mắc xin liên hệ:<br>
+        Hoàng<br>
+        097 111 94 86 (cold line)<br>
+        <a href="https://www.facebook.com/ShadowProgr/" target="_blank">Facebook</a>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
