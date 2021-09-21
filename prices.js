@@ -24,7 +24,12 @@ const prices = {
     "badge-copper-sand": "200000",
     "badge-copper-polish": "220000",
     "badge-ss-polish": "370000",
-    "badge-special": "350000",
+    "badge-crane-alu-anode": "300000",
+    "badge-crane-alu-ecoat": "300000",
+    "badge-crane-brass-pvd": "350000",
+    "badge-flower-alu-anode": "300000",
+    "badge-flower-alu-ecoat": "300000",
+    "badge-flower-brass-pvd": "350000",
 
     "weight-regular-alu-anode": "700000",
     "weight-regular-alu-ecoat": "850000",

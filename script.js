@@ -13,9 +13,9 @@ function updateRenders() {
         return;
     let badge = $("input[type='radio'][name='grp-badge-color']:checked").attr("id").replace("badge-", "");
     if (layout.includes("crane")) {
-        badge = "brass-crane";
+        badge = "crane-" + badge;
     } else if (layout.includes("flower")) {
-        badge = "brass-flower";
+        badge = "flower-" + badge;
     }
     $(".configurator-viewer .render-badge").attr("src", `https://raw.githubusercontent.com/ShadowProgr/kyuu-configurator/main/assets/badge/${badge}.png?raw=true`);
 
@@ -109,8 +109,10 @@ function updatePrice() {
     } else {
         badgeFinish = badge;
     }
-    if (layout.includes("crane") || layout.includes("flower")) {
-        badgeFinish = "special";
+    if (layout.includes("crane")) {
+        badgeFinish = "crane-" + badgeFinish;
+    } else if (layout.includes("flower")) {
+        badgeFinish = "flower-" + badgeFinish;
     }
     price += parseInt(prices[`badge-${badgeFinish}`]);
     temp += parseInt(prices[`badge-${badgeFinish}`]) + " ";
@@ -197,7 +199,10 @@ function getConfigString() {
         configString += `Subweight: ${subweight}\<br>`;
     }
     const plate = $("input[type='radio'][name='grp-plate-color']:checked").attr("id").replace("plate-", "");
-    configString += `Plate: ${plate}`;
+    configString += `Plate: ${plate}<br>`;
+
+    const pcb = $("input[type='radio'][name='grp-pcb']:checked").attr("id").replace("plate-", "");
+    configString += `PCB: ${pcb}`;
 
     return configString;
 };
@@ -255,14 +260,13 @@ $(document).ready(function() {
             $(".grp-badge-color span:not(.badge-pc-color)").fadeOut("fast");
             $(".grp-badge-color .badge-pc-color").fadeIn("fast");
         } else if (id.includes("brass")) {
-            $(".grp-badge-color span:not(.badge-brass-color)").fadeOut("fast");
-
             const layout = $("input[type='radio'][name='grp-layout']:checked").attr("id");
             if (layout.includes("crane") || layout.includes("flower")) {
                 $(".grp-badge-color .crane").fadeIn("fast");
             } else {
                 $(".grp-badge-color .badge-brass-color").fadeIn("fast");
             }
+            $(".grp-badge-color span:not(.badge-brass-color)").fadeOut("fast");
         } else if (id.includes("copper")) {
             $(".grp-badge-color span:not(.badge-copper-color)").fadeOut("fast");
             $(".grp-badge-color .badge-copper-color").fadeIn("fast");
