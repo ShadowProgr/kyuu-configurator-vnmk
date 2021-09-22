@@ -199,18 +199,18 @@ function getConfigString() {
     const weightMaterial = $("input[type='radio'][name='grp-weight-material']:checked").parent("span").find("label").text().trim();
     const weightColor = $("input[type='radio'][name='grp-weight-color']:checked").parent("span").find("label").text().trim();
 
-    let configString = `Case: ${layout} ${caseMaterial} ${caseColor}<br>Badge: ${badgeMaterial} ${badgeColor}<br>Weight: ${weightStyle} ${weightMaterial} ${weightColor}<br>`;
+    let configString = `<strong>Case</strong>: ${layout} ${caseMaterial} ${caseColor}<br><strong>Badge</strong>: ${badgeMaterial} ${badgeColor}<br><strong>Weight</strong>: ${weightStyle} ${weightMaterial} ${weightColor}<br>`;
     if (weightStyle.includes("Hybrid")) {
         const subweightMaterial = $("input[type='radio'][name='grp-subweight-material']:checked").parent("span").find("label").text().trim();
         const subweightColor = $("input[type='radio'][name='grp-subweight-color']:checked").parent("span").find("label").text().trim();
-        configString += `Subweight: ${subweightMaterial} ${subweightColor}<br>`;
+        configString += `<strong>Subweight</strong>: ${subweightMaterial} ${subweightColor}<br>`;
     }
     const plateMaterial = $("input[type='radio'][name='grp-plate-material']:checked").parent("span").find("label").text().trim();
     const plateColor = $("input[type='radio'][name='grp-plate-color']:checked").parent("span").find("label").text().trim();
-    configString += `Plate: ${plateMaterial} ${plateColor}<br>`;
+    configString += `<strong>Plate</strong>: ${plateMaterial} ${plateColor}<br>`;
 
     const pcb = $("input[type='radio'][name='grp-pcb']:checked").parent("span").find("label").text().trim();
-    configString += `PCB: ${pcb}`;
+    configString += `<strong>PCB</strong>: ${pcb}`;
 
     return configString;
 };
@@ -439,7 +439,18 @@ $(document).ready(function () {
             $("#price").val("");
             $("#config").val("");
             $("#price-display").text($(".price-number").text() + " ₫");
-            $("#config-display").html(getConfigString());
+            const prices = getPrices();
+            const configs = getConfigString();
+            let arrConfig = configs.split("<br>").filter(x => x !== "");
+            jQuery.each(prices, function (i, price) {
+                console.log(price);
+                $("#list-price").append('<div class="col-8 bg-light-grey p-1">' +
+                    '<div class="font-italic">' + arrConfig[i] + '</div>' +
+                    '</div>' +
+                    '<div class="col-4 bg-light-grey d-flex justify-content-end p-1">' +
+                    '<div class="font-italic">' + price.toLocaleString(undefined) + ' ₫</div>' +
+                    '</div>')
+            });
 
             $("#price").val($(".price-number").text());
             $("#config").val(getConfigString());
