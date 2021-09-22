@@ -444,7 +444,6 @@ $(document).ready(function () {
             let arrConfig = configs.split("<br>").filter(x => x !== "");
             $("#list-price").text("");
             jQuery.each(prices, function (i, price) {
-                console.log(price);
                 $("#list-price").append('<div class="col-8 bg-light-grey p-1">' +
                     '<div class="font-italic">' + arrConfig[i] + '</div>' +
                     '</div>' +
