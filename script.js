@@ -442,6 +442,7 @@ $(document).ready(function () {
             const prices = getPrices();
             const configs = getConfigString();
             let arrConfig = configs.split("<br>").filter(x => x !== "");
+            $("#list-price").text("");
             jQuery.each(prices, function (i, price) {
                 console.log(price);
                 $("#list-price").append('<div class="col-8 bg-light-grey p-1">' +
