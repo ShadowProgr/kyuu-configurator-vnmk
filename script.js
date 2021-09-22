@@ -440,6 +440,9 @@ $(document).ready(function () {
             $("#config").val("");
             $("#price-display").text($(".price-number").text() + " ₫");
             const prices = getPrices();
+            if (prices[3] == 0) {
+                prices.splice(3, 1);
+            }
             const configs = getConfigString();
             let arrConfig = configs.split("<br>").filter(x => x !== "");
             $("#list-price").text("");
