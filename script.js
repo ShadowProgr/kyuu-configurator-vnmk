@@ -187,28 +187,33 @@ function getConfigString() {
     if (!isValidSelection())
         return "";
 
-    const layout = $("input[type='radio'][name='grp-layout']:checked").attr("id").replace("case-", "");
-    const caseColor = $("input[type='radio'][name='grp-case-color']:checked").attr("id").replace("case-", "");
-    const badge = $("input[type='radio'][name='grp-badge-color']:checked").attr("id").replace("badge-", "");
-    const weightStyle = $("input[type='radio'][name='grp-weight-style']:checked").attr("id");
-    const weight = $("input[type='radio'][name='grp-weight-color']:checked").attr("id").replace("weight-", "");
+    const layout = $("input[type='radio'][name='grp-layout']:checked").parent("span").find("label").text().trim();
+    const caseMaterial = $("input[type='radio'][name='grp-case-material']:checked").parent("span").find("label").text().trim();
+    const caseColor = $("input[type='radio'][name='grp-case-color']:checked").parent("span").find("label").text().trim();
+    const badgeMaterial = $("input[type='radio'][name='grp-badge-material']:checked").parent("span").find("label").text().trim();
+    const badgeColor = $("input[type='radio'][name='grp-badge-color']:checked").parent("span").find("label").text().trim();
+    const weightStyle = $("input[type='radio'][name='grp-weight-style']:checked").parent("span").find("label").text().trim();
+    const weightMaterial = $("input[type='radio'][name='grp-weight-material']:checked").parent("span").find("label").text().trim();
+    const weightColor = $("input[type='radio'][name='grp-weight-color']:checked").parent("span").find("label").text().trim();
 
-    let configString = `Case: ${layout}-${caseColor}\<br>Badge: ${badge}\<br>Weight: ${weight}\<br>`;
-    if (weightStyle.includes("hybrid")) {
-        const subweight = $("input[type='radio'][name='grp-subweight-color']:checked").attr("id").replace("subweight-", "");
-        configString += `Subweight: ${subweight}\<br>`;
+    let configString = `Case: ${layout} ${caseMaterial} ${caseColor}<br>Badge: ${badgeMaterial} ${badgeColor}<br>Weight: ${weightStyle} ${weightMaterial} ${weightColor}<br>`;
+    if (weightStyle.includes("Hybrid")) {
+        const subweightMaterial = $("input[type='radio'][name='grp-subweight-material']:checked").parent("span").find("label").text().trim();
+        const subweightColor = $("input[type='radio'][name='grp-subweight-color']:checked").parent("span").find("label").text().trim();
+        configString += `Subweight: ${subweightMaterial} ${subweightColor}<br>`;
     }
-    const plate = $("input[type='radio'][name='grp-plate-color']:checked").attr("id").replace("plate-", "");
-    configString += `Plate: ${plate}<br>`;
+    const plateMaterial = $("input[type='radio'][name='grp-plate-material']:checked").parent("span").find("label").text().trim();
+    const plateColor = $("input[type='radio'][name='grp-plate-color']:checked").parent("span").find("label").text().trim();
+    configString += `Plate: ${plateMaterial} ${plateColor}<br>`;
 
-    const pcb = $("input[type='radio'][name='grp-pcb']:checked").attr("id").replace("plate-", "");
+    const pcb = $("input[type='radio'][name='grp-pcb']:checked").parent("span").find("label").text().trim();
     configString += `PCB: ${pcb}`;
 
     return configString;
 };
 
-$(document).ready(function() {
-    $("input[name='grp-layout']").change(function() {
+$(document).ready(function () {
+    $("input[name='grp-layout']").change(function () {
         const id = $("input[type='radio'][name='grp-layout']:checked").attr("id");
 
         if (id.includes("crane") || id.includes("flower")) {
@@ -228,7 +233,7 @@ $(document).ready(function() {
         updatePrice();
     });
 
-    $("input[name='grp-case-material']").change(function() {
+    $("input[name='grp-case-material']").change(function () {
         const id = $("input[type='radio'][name='grp-case-material']:checked").attr("id");
 
         if (id.includes("alu")) {
@@ -245,12 +250,12 @@ $(document).ready(function() {
         updatePrice();
     });
 
-    $("input[name='grp-case-color']").change(function() {
+    $("input[name='grp-case-color']").change(function () {
         updateRenders();
         updatePrice();
     });
 
-    $("input[name='grp-badge-material']").change(function() {
+    $("input[name='grp-badge-material']").change(function () {
         const id = $("input[type='radio'][name='grp-badge-material']:checked").attr("id");
 
         if (id.includes("alu")) {
@@ -278,12 +283,12 @@ $(document).ready(function() {
         updatePrice();
     });
 
-    $("input[name='grp-badge-color']").change(function() {
+    $("input[name='grp-badge-color']").change(function () {
         updateRenders();
         updatePrice();
     });
 
-    $("input[name='grp-weight-style']").change(function() {
+    $("input[name='grp-weight-style']").change(function () {
         const id = $("input[type='radio'][name='grp-weight-style']:checked").attr("id");
 
         if (id == "weight-regular") {
@@ -301,7 +306,7 @@ $(document).ready(function() {
         updatePrice();
     });
 
-    $("input[name='grp-weight-material']").change(function() {
+    $("input[name='grp-weight-material']").change(function () {
         const id = $("input[type='radio'][name='grp-weight-material']:checked").attr("id");
 
         if (id.includes("alu")) {
@@ -328,12 +333,12 @@ $(document).ready(function() {
         updatePrice();
     });
 
-    $("input[name='grp-weight-color']").change(function() {
+    $("input[name='grp-weight-color']").change(function () {
         updateRenders();
         updatePrice();
     });
 
-    $("input[name='grp-subweight-material']").change(function() {
+    $("input[name='grp-subweight-material']").change(function () {
         const id = $("input[type='radio'][name='grp-subweight-material']:checked").attr("id");
 
         if (id.includes("alu")) {
@@ -347,12 +352,12 @@ $(document).ready(function() {
         updatePrice();
     });
 
-    $("input[name='grp-subweight-color']").change(function() {
+    $("input[name='grp-subweight-color']").change(function () {
         updateRenders();
         updatePrice();
     });
 
-    $("input[name='grp-plate-material']").change(function() {
+    $("input[name='grp-plate-material']").change(function () {
         const id = $("input[type='radio'][name='grp-plate-material']:checked").attr("id");
 
         if (id.includes("alu")) {
@@ -375,17 +380,17 @@ $(document).ready(function() {
         updatePrice();
     });
 
-    $("input[name='grp-plate-color']").change(function() {
+    $("input[name='grp-plate-color']").change(function () {
         updateRenders();
         updatePrice();
     });
 
-    $("input[name='grp-pcb']").change(function() {
+    $("input[name='grp-pcb']").change(function () {
         updateRenders();
         updatePrice();
     });
 
-    $("#my-form").submit(function(e) {
+    $("#my-form").submit(function (e) {
         e.preventDefault();
         var vnf_regex = /((09|03|07|08|05)+([0-9]{8})\b)/g;
         if (vnf_regex.test($("#phone").val()) == false) {
@@ -407,12 +412,12 @@ $(document).ready(function() {
                 "entry.924331765": $("#price").val(),
                 "entry.1059748155": $("#config").val(),
             },
-            success: function(result) {
+            success: function (result) {
                 console.log(result);
             },
-            error: function(result) {
+            error: function (result) {
                 console.log(result);
-                $("#form").fadeOut("fast", function() {
+                $("#form").fadeOut("fast", function () {
                     $("#message .price").text($(".price-number").text() + " ₫");
                     $("#message").fadeIn("fast");
                 });
@@ -421,7 +426,7 @@ $(document).ready(function() {
         return false;
     });
 
-    $(".open-form").on("click", function(e) {
+    $(".open-form").on("click", function (e) {
         uncheckHidden();
         if (isValidSelection()) {
             $("#name").val("");
@@ -441,11 +446,11 @@ $(document).ready(function() {
         }
     });
 
-    $("#form .close-form").on("click", function(e) {
+    $("#form .close-form").on("click", function (e) {
         $("#form").fadeOut("fast");
     });
 
-    $("#message .close-form").on("click", function(e) {
+    $("#message .close-form").on("click", function (e) {
         $("#message").fadeOut("fast");
     });
 
