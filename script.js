@@ -70,12 +70,11 @@ function isValidSelection() {
     return true;
 };
 
-function updatePrice() {
+function getPrices() {
     if (!isValidSelection())
-        return;
+        return [];
 
-    let price = 0;
-    let temp = "";
+    let priceArray = [];
 
     // Case
     const layout = $("input[type='radio'][name='grp-layout']:checked").attr("id").replace("case-", "");
@@ -92,8 +91,7 @@ function updatePrice() {
     } else {
         caseFinish = caseColor;
     }
-    price += parseInt(prices[`${layout}-${caseFinish}`]);
-    temp += parseInt(prices[`${layout}-${caseFinish}`]) + " ";
+    priceArray.push(parseInt(prices[`${layout}-${caseFinish}`]));
 
     // Badge
     const badge = $("input[type='radio'][name='grp-badge-color']:checked").attr("id").replace("badge-", "");
@@ -114,8 +112,7 @@ function updatePrice() {
     } else if (layout.includes("flower")) {
         badgeFinish = "flower-" + badgeFinish;
     }
-    price += parseInt(prices[`badge-${badgeFinish}`]);
-    temp += parseInt(prices[`badge-${badgeFinish}`]) + " ";
+    priceArray.push(parseInt(prices[`badge-${badgeFinish}`]));
 
     // Weight
     const weightStyle = $("input[type='radio'][name='grp-weight-style']:checked").attr("id");
@@ -132,8 +129,7 @@ function updatePrice() {
     } else {
         weightFinish = weight;
     }
-    price += parseInt(prices[`${weightStyle}-${weightFinish}`]);
-    temp += parseInt(prices[`${weightStyle}-${weightFinish}`]) + " ";
+    priceArray.push(parseInt(prices[`${weightStyle}-${weightFinish}`]));
 
     // Subweight
     if (weightStyle.includes("hybrid") &&
@@ -150,8 +146,9 @@ function updatePrice() {
         } else {
             subweightFinish = "pc";
         }
-        price += parseInt(prices[`subweight-${subweightFinish}`]);
-        temp += parseInt(prices[`subweight-${subweightFinish}`]) + " ";
+        priceArray.push(parseInt(prices[`subweight-${subweightFinish}`]));
+    } else {
+        priceArray.push(0);
     }
 
     // Plate
@@ -170,17 +167,23 @@ function updatePrice() {
     } else {
         plateFinish = plate;
     }
-    price += parseInt(prices[`plate-${plateFinish}`]);
-    temp += parseInt(prices[`plate-${plateFinish}`]) + " ";
+    priceArray.push(parseInt(prices[`plate-${plateFinish}`]));
 
     // PCB
     const pcb = $("input[type='radio'][name='grp-pcb']:checked").attr("id");
+    priceArray.push(parseInt(prices[`${pcb}`]));
 
-    price += parseInt(prices[`${pcb}`]);
-    temp += parseInt(prices[`${pcb}`]) + " ";
+    return priceArray;
+};
 
-    $(".price-number").text(price.toLocaleString(undefined));
-    // $(".price-number").text(temp);
+function updatePrice() {
+    const p = getPrices();
+
+    if (p.length == 0) {
+        $(".price-number").text("N/A");
+    } else {
+        $(".price-number").text(p.reduce((a, b) => a + b).toLocaleString(undefined));
+    }
 };
 
 function getConfigString() {
