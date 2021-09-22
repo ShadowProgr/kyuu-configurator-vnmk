@@ -131,6 +131,7 @@ body {
 img {
     width: 100%;
     height: auto;
+    max-height: 50vh;
 }
 
 .carousel-control-next,
@@ -284,4 +285,8 @@ img {
 
 .bg-grey {
     background-color: grey;
+}
+
+.h-100-vh {
+    height: 100vh;
 }
