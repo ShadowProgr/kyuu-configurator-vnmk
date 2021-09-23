@@ -295,12 +295,10 @@ $(document).ready(function () {
         const id = $("input[type='radio'][name='grp-weight-style']:checked").attr("id");
 
         if (id == "weight-regular") {
-            $(".grp-subweight-material").fadeOut("fast");
-            $(".grp-subweight-color").fadeOut("fast");
+            $(".cat-subweight").fadeOut("fast");
             $(".weight-hybrid-color").fadeOut("fast");
         } else {
-            $(".grp-subweight-material").fadeIn("fast");
-            $(".grp-subweight-color").fadeIn("fast");
+            $(".cat-subweight").fadeIn("fast");
             if ($("input[type='radio'][name='grp-weight-material']:checked").length && $("input[type='radio'][name='grp-weight-material']:checked").attr("id").includes("brass")) {
                 $(".weight-hybrid-color").fadeIn("fast");
             }
