@@ -186,7 +186,7 @@ function updatePrice() {
     }
 };
 
-function getConfigString() {
+function getCurrentConfig() {
     if (!isValidSelection())
         return "";
 
@@ -213,6 +213,40 @@ function getConfigString() {
     configString += `<strong>PCB</strong>: ${pcb}`;
 
     return configString;
+};
+
+function exportConfig() {
+    let config = "";
+    config += String.fromCharCode($("input[name='grp-layout']").index($("input[name='grp-layout']:checked")) + 65);
+    config += String.fromCharCode($("input[name='grp-case-material']").index($("input[name='grp-case-material']:checked")) + 65);
+    config += String.fromCharCode($("input[name='grp-case-color']").index($("input[name='grp-case-color']:checked")) + 65);
+    config += String.fromCharCode($("input[name='grp-badge-material']").index($("input[name='grp-badge-material']:checked")) + 65);
+    config += String.fromCharCode($("input[name='grp-badge-color']").index($("input[name='grp-badge-color']:checked")) + 65);
+    config += String.fromCharCode($("input[name='grp-weight-style']").index($("input[name='grp-weight-style']:checked")) + 65);
+    config += String.fromCharCode($("input[name='grp-weight-material']").index($("input[name='grp-weight-material']:checked")) + 65);
+    config += String.fromCharCode($("input[name='grp-weight-color']").index($("input[name='grp-weight-color']:checked")) + 65);
+    config += String.fromCharCode($("input[name='grp-subweight-material']").index($("input[name='grp-subweight-material']:checked")) + 65);
+    config += String.fromCharCode($("input[name='grp-subweight-color']").index($("input[name='grp-subweight-color']:checked")) + 65);
+    config += String.fromCharCode($("input[name='grp-plate-material']").index($("input[name='grp-plate-material']:checked")) + 65);
+    config += String.fromCharCode($("input[name='grp-plate-color']").index($("input[name='grp-plate-color']:checked")) + 65);
+    config += String.fromCharCode($("input[name='grp-pcb']").index($("input[name='grp-pcb']:checked")) + 65);
+    return config;
+};
+
+function importConfig(config) {
+    $("input[name='grp-layout']").eq(config.charCodeAt(0) - 65).prop("checked", true).change();
+    $("input[name='grp-case-material']").eq(config.charCodeAt(1) - 65).prop("checked", true).change();
+    $("input[name='grp-case-color']").eq(config.charCodeAt(2) - 65).prop("checked", true).change();
+    $("input[name='grp-badge-material']").eq(config.charCodeAt(3) - 65).prop("checked", true).change();
+    $("input[name='grp-badge-color']").eq(config.charCodeAt(4) - 65).prop("checked", true).change();
+    $("input[name='grp-weight-style']").eq(config.charCodeAt(5) - 65).prop("checked", true).change();
+    $("input[name='grp-weight-material']").eq(config.charCodeAt(6) - 65).prop("checked", true).change();
+    $("input[name='grp-weight-color']").eq(config.charCodeAt(7) - 65).prop("checked", true).change();
+    $("input[name='grp-subweight-material']").eq(config.charCodeAt(8) - 65).prop("checked", true).change();
+    $("input[name='grp-subweight-color']").eq(config.charCodeAt(9) - 65).prop("checked", true).change();
+    $("input[name='grp-plate-material']").eq(config.charCodeAt(10) - 65).prop("checked", true).change();
+    $("input[name='grp-plate-color']").eq(config.charCodeAt(11) - 65).prop("checked", true).change();
+    $("input[name='grp-pcb']").eq(config.charCodeAt(12) - 65).prop("checked", true).change();
 };
 
 // Selection change events
@@ -512,7 +546,7 @@ $(document).ready(function () {
             if (prices[3] == 0) {
                 prices.splice(3, 1);
             }
-            const configs = getConfigString();
+            const configs = getCurrentConfig();
             let arrConfig = configs.split("<br>").filter(x => x !== "");
             $("#list-price").text("");
             jQuery.each(prices, function (i, price) {
@@ -525,7 +559,7 @@ $(document).ready(function () {
             });
 
             $("#price").val($(".price-number").text());
-            $("#config").val(getConfigString());
+            $("#config").val(getCurrentConfig());
             $("#form").fadeIn("fast");
         } else {
             alert("Vui lòng chọn đủ option");
@@ -540,17 +574,5 @@ $(document).ready(function () {
         $("#message").fadeOut("fast");
     });
 
-    $("input[name='grp-layout'][id='wkl']").prop("checked", true).change();
-    $("input[name='grp-case-material'][id='case-alu']").prop("checked", true).change();
-    $("input[name='grp-case-color'][id='case-alu-ewhite']").prop("checked", true).change();
-    $("input[name='grp-badge-material'][id='badge-alu']").prop("checked", true).change();
-    $("input[name='grp-badge-color'][id='badge-alu-eblack']").prop("checked", true).change();
-    $("input[name='grp-weight-style'][id='weight-hybrid']").prop("checked", true).change();
-    $("input[name='grp-weight-material'][id='weight-alu']").prop("checked", true).change();
-    $("input[name='grp-weight-color'][id='weight-alu-eblack']").prop("checked", true).change();
-    $("input[name='grp-subweight-material'][id='subweight-alu']").prop("checked", true).change();
-    $("input[name='grp-subweight-color'][id='subweight-alu-ewhite']").prop("checked", true).change();
-    $("input[name='grp-plate-material'][id='plate-pom']").prop("checked", true).change();
-    $("input[name='grp-plate-color'][id='plate-pom-black']").prop("checked", true).change();
-    $("input[name='grp-pcb'][id='pcb-solder']").prop("checked", true).change();
+    importConfig("BAJAKACSAEAKA");
 });
