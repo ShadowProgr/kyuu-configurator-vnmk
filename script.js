@@ -51,10 +51,6 @@ function updateRenders() {
     $(".configurator-viewer .render-plate.side-view").attr("src", `https://raw.githubusercontent.com/ShadowProgr/kyuu-configurator/main/assets/side-view/plate/${plate}.png?raw=true`);
 };
 
-function uncheckHidden() {
-    $(".option-set span").filter(":hidden").find("input[type='radio']:checked").prop("checked", false);
-}
-
 function isValidSelection() {
     if (!$("input[type='radio'][name='grp-layout']:checked").length ||
         !$("input[type='radio'][name='grp-case-color']:checked").length ||
@@ -539,7 +535,6 @@ $(document).ready(function () {
     });
 
     $(".open-form").on("click", function (e) {
-        uncheckHidden();
         if (isValidSelection()) {
             $("#name").val("");
             $("#phone").val("");
