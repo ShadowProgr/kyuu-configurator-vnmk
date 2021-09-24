@@ -6,6 +6,8 @@ const prices = {
     "wk-pc": "2200000",
     "wkl-alu-anode": "2500000",
     "wkl-alu-ecoat": "2550000",
+    "wkl-copper-polish": "8050000",
+    "wkl-copper-sand": "7950000",
     "wkl-pc": "2200000",
     "wk-crane-alu-anode": "3150000",
     "wk-crane-alu-ecoat": "3500000",

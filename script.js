@@ -257,16 +257,12 @@ function onGrpLayoutChange() {
 
     if (id.includes("crane") || id.includes("flower")) {
         $(".grp-case-material span:not(.case-alu)").fadeOut("fast");
-        $(".grp-badge-material span:not(.crane)").fadeOut("fast");
-        $(".grp-badge-color span:not(.crane)").fadeOut("fast");
+        $(".grp-badge-material span:not(.badge-special)").fadeOut("fast");
+        $(".grp-badge-color span:not(.badge-special-color)").fadeOut("fast");
     } else {
-        $(".grp-case-material .case-pc").fadeIn("fast");
-        $(".grp-badge-material .kyuu").fadeIn("fast");
-        if (id.includes("wkl")) {
-            $(".grp-case-material .case-copper").fadeOut("fast");
-        } else {
-            $(".grp-case-material .case-copper").fadeIn("fast");
-        }
+        $(".grp-case-material span:not(.case-alu)").fadeIn("fast");
+        $(".grp-badge-material span:not(.badge-special)").fadeIn("fast");
+        $("input[type='radio'][name='grp-badge-material']:checked").change();
     }
 
     // Check if selected Case material is still valid, if not select first valid option
@@ -274,6 +270,22 @@ function onGrpLayoutChange() {
     selectedSpan.parent().children().promise().done(function () {
         if (selectedSpan.filter(":hidden").length > 0) {
             $("input[type='radio'][name='grp-case-material']").parent().filter(":visible").first().find("input").prop("checked", true).change();
+        }
+    });
+
+    // Check if selected Badge material is still valid, if not select first valid option
+    const selectedSpan2 = $("input[type='radio'][name='grp-badge-material']:checked").parent();
+    selectedSpan2.parent().children().promise().done(function () {
+        if (selectedSpan2.filter(":hidden").length > 0) {
+            $("input[type='radio'][name='grp-badge-material']").parent().filter(":visible").first().find("input").prop("checked", true).change();
+        }
+    });
+
+    // Check if selected Badge color is still valid, if not select first valid option
+    const selectedSpan3 = $("input[type='radio'][name='grp-badge-color']:checked").parent();
+    selectedSpan3.parent().children().promise().done(function () {
+        if (selectedSpan3.filter(":hidden").length > 0) {
+            $("input[type='radio'][name='grp-badge-color']").parent().filter(":visible").first().find("input").prop("checked", true).change();
         }
     });
 
@@ -319,7 +331,7 @@ function onGrpBadgeMaterialChange() {
     } else if (id.includes("brass")) {
         const layout = $("input[type='radio'][name='grp-layout']:checked").attr("id");
         if (layout.includes("crane") || layout.includes("flower")) {
-            $(".grp-badge-color .crane").fadeIn("fast");
+            $(".grp-badge-color .badge-special-color").fadeIn("fast");
         } else {
             $(".grp-badge-color .badge-brass-color").fadeIn("fast");
         }
