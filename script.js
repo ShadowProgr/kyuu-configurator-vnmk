@@ -150,7 +150,7 @@ function getPrices() {
         }
         priceArray.push(parseInt(prices[`subweight-${subweightFinish}`]));
     } else {
-        priceArray.push(0);
+        // priceArray.push(0);
     }
 
     // Plate
@@ -556,9 +556,6 @@ $(document).ready(function () {
             $("#config").val("");
             $("#price-display").text($(".price-number").text() + " ₫");
             const prices = getPrices();
-            if (prices[3] == 0) {
-                prices.splice(3, 1);
-            }
             const configs = getCurrentConfig();
             let arrConfig = configs.split("<br>").filter(x => x !== "");
             $("#list-price").text("");
@@ -572,7 +569,7 @@ $(document).ready(function () {
             });
 
             $("#price").val($(".price-number").text());
-            $("#config").val(getCurrentConfig());
+            $("#config").val(configs);
             $("#form").fadeIn("fast");
         } else {
             alert("Vui lòng chọn đủ option");
