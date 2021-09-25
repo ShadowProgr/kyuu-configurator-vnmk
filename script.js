@@ -184,6 +184,17 @@ function updatePrice() {
     if (p.length == 0) {
         $(".price-number").text("N/A");
     } else {
+        $("#price-case").text(p[0].toLocaleString(undefined) + " ₫");
+        $("#price-badge").text(p[1].toLocaleString(undefined) + " ₫");
+        $("#price-weight").text(p[2].toLocaleString(undefined) + " ₫");
+        if (p.length < 6) {
+            $("#price-plate").text(p[3].toLocaleString(undefined) + " ₫");
+            $("#price-pcb").text(p[4].toLocaleString(undefined) + " ₫");
+        } else {
+            $("#price-subweight").text(p[3].toLocaleString(undefined) + " ₫");
+            $("#price-plate").text(p[4].toLocaleString(undefined) + " ₫");
+            $("#price-pcb").text(p[5].toLocaleString(undefined) + " ₫");
+        }
         $(".price-number").text(p.reduce((a, b) => a + b).toLocaleString(undefined));
     }
 };
