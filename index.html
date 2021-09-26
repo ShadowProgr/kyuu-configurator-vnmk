@@ -8,6 +8,12 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script
@@ -52,6 +58,13 @@
                 <div class="option-category-header d-flex">
                   <div class="option-category-title d-flex pe-3">
                     <h4>Case</h4>
+                    <button
+                      type="button"
+                      class="text-muted back info-button"
+                      data-section="case"
+                    >
+                      <i class="fas fa-info-circle"></i>
+                    </button>
                   </div>
                   <div class="d-flex justify-content-center pt-1">
                     <span class="text-muted" id="price-case">1.000.000 ₫</span>
@@ -452,6 +465,13 @@
                 <div class="option-category-header d-flex">
                   <div class="option-category-title d-flex pe-3">
                     <h4>Badge</h4>
+                    <button
+                      type="button"
+                      class="text-muted back info-button"
+                      data-section="badge"
+                    >
+                      <i class="fas fa-info-circle"></i>
+                    </button>
                   </div>
                   <div class="d-flex justify-content-center pt-1">
                     <span class="text-muted" id="price-badge">1.000.000 ₫</span>
@@ -836,6 +856,13 @@
                 <div class="option-category-header d-flex">
                   <div class="option-category-title d-flex pe-3">
                     <h4>Weight</h4>
+                    <button
+                      type="button"
+                      class="text-muted back info-button"
+                      data-section="weight"
+                    >
+                      <i class="fas fa-info-circle"></i>
+                    </button>
                   </div>
                   <div class="d-flex justify-content-center pt-1">
                     <span class="text-muted" id="price-weight"
@@ -1269,6 +1296,13 @@
                 <div class="option-category-header d-flex">
                   <div class="option-category-title d-flex pe-3">
                     <h4>Sub-weight</h4>
+                    <button
+                      type="button"
+                      class="text-muted back info-button"
+                      data-section="sub-weight"
+                    >
+                      <i class="fas fa-info-circle"></i>
+                    </button>
                   </div>
                   <div class="d-flex justify-content-center pt-1">
                     <span class="text-muted" id="price-subweight"
@@ -1543,6 +1577,13 @@
                 <div class="option-category-header d-flex">
                   <div class="option-category-title d-flex pe-3">
                     <h4>Plate</h4>
+                    <button
+                      type="button"
+                      class="text-muted back info-button"
+                      data-section="plate"
+                    >
+                      <i class="fas fa-info-circle"></i>
+                    </button>
                   </div>
                   <div class="d-flex justify-content-center pt-1">
                     <span class="text-muted" id="price-plate">1.000.000 ₫</span>
@@ -1955,6 +1996,13 @@
                 <div class="option-category-header d-flex">
                   <div class="option-category-title d-flex pe-3">
                     <h4>PCB</h4>
+                    <button
+                      type="button"
+                      class="text-muted back info-button"
+                      data-section="pcb"
+                    >
+                      <i class="fas fa-info-circle"></i>
+                    </button>
                   </div>
                   <div class="d-flex justify-content-center pt-1">
                     <span class="text-muted" id="price-pcb">1.000.000 ₫</span>
@@ -2028,11 +2076,10 @@
             h-100-vh
             d-flex
             flex-column
-            justify-content-center
             position-relative
           "
         >
-          <div class="justify-content-center align-items-center d-flex">
+          <div class="config-output">
             <div
               id="carouselExampleIndicators"
               class="carousel slide"
@@ -2702,6 +2749,48 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pop-up info -->
+    <div id="info" class="form-popup">
+      <div class="container form-wrapper">
+        <button class="close-form">Đóng</button>
+        <div class="justify-content-center align-items-center d-flex">
+          <div class="info-content">
+            <span
+              ><p>
+                <strong>Considerations: </strong>Selecting a polycarbonate top
+                case may alter the acoustic properties of the keyboard.
+                Polycarbonate generally allows for more resonance than aluminum.
+              </p>
+
+              <div id="sf-bot-blk">
+                <strong>Black: </strong><span>Anodized aluminum</span>
+              </div>
+              <div id="sf-bot-bgr">
+                <strong>Bluegray: </strong><span>Anodized aluminum</span>
+              </div>
+              <div id="sf-bot-red">
+                <strong>Maroon: </strong><span>Anodized aluminum</span>
+              </div>
+              <div id="sf-bot-blu">
+                <strong>Blue: </strong><span>Anodized aluminum</span>
+              </div>
+              <div id="sf-bot-lil">
+                <strong>Lilac: </strong><span>Anodized aluminum</span>
+              </div>
+              <div id="sf-bot-wht">
+                <strong>White: </strong
+                ><span>Electrophoresis-coated aluminum</span>
+              </div>
+              <div id="sf-bot-pc">
+                <strong>Polycarbonate: </strong
+                ><span>CNC-machined and sandblasted clear polycarbonate</span>
+              </div></span
+            >
+          </div>
         </div>
       </div>
     </div>
