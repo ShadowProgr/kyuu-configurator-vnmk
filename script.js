@@ -600,6 +600,10 @@ $(document).ready(function() {
         $("#message").fadeOut("fast");
     });
 
+    $("#showcase .close-form").on("click", function(e) {
+        $("#showcase").fadeOut("fast");
+    });
+
     importConfig("BAJAKACSAEAKA");
 
     $('.showcase .carousel .carousel-item').each(function() {
@@ -618,5 +622,12 @@ $(document).ready(function() {
 
             next.children(':first-child').clone().appendTo($(this));
         }
+    });
+
+    $(".showcase .carousel-inner .carousel-item img").click(function() {
+        let index = $(this).data("index");
+        $("#showcase").fadeIn("fast");
+        $("#showcase .carousel-inner .carousel-item.active").removeClass("active");
+        $("#showcase .carousel-inner .carousel-item:nth-child(" + index + ")").addClass("active");
     });
 });
