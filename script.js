@@ -7,8 +7,10 @@ function updateRenders() {
     const caseColor = $("input[type='radio'][name='grp-case-color']:checked").attr("id").replace("case-", "");
     $(".configurator-viewer .render-bottom.top-view").attr("src", `https://raw.githubusercontent.com/ShadowProgr/kyuu-configurator/main/assets/top-view/case-bottom/${caseColor}.png`);
     $(".configurator-viewer .render-bottom.side-view").attr("src", `https://raw.githubusercontent.com/ShadowProgr/kyuu-configurator/main/assets/side-view/case-bottom/${caseColor}.png`);
+    $(".configurator-viewer .render-bottom.bot-view").attr("src", `https://raw.githubusercontent.com/ShadowProgr/kyuu-configurator/main/assets/bot-view/case-bottom/${caseColor}.png`);
     $(".configurator-viewer .render-top.top-view").attr("src", `https://raw.githubusercontent.com/ShadowProgr/kyuu-configurator/main/assets/top-view/case-top/${layout}-${caseColor}.png`);
     $(".configurator-viewer .render-top.side-view").attr("src", `https://raw.githubusercontent.com/ShadowProgr/kyuu-configurator/main/assets/side-view/case-top/${layout}-${caseColor}.png`);
+    $(".configurator-viewer .render-top.bot-view").attr("src", `https://raw.githubusercontent.com/ShadowProgr/kyuu-configurator/main/assets/bot-view/case-top/${caseColor}.png`);
 
     // Badge
     if (!$("input[type='radio'][name='grp-badge-color']:checked").length)
@@ -30,6 +32,7 @@ function updateRenders() {
     const weight = $("input[type='radio'][name='grp-weight-color']:checked").attr("id").replace("weight-", "");
     $(".configurator-viewer .render-weight.top-view").attr("src", `https://raw.githubusercontent.com/ShadowProgr/kyuu-configurator/main/assets/top-view/${weightStyle}/${weight}.png?raw=true`);
     $(".configurator-viewer .render-weight.side-view").attr("src", `https://raw.githubusercontent.com/ShadowProgr/kyuu-configurator/main/assets/side-view/${weightStyle}/${weight}.png?raw=true`);
+    $(".configurator-viewer .render-weight.bot-view").attr("src", `https://raw.githubusercontent.com/ShadowProgr/kyuu-configurator/main/assets/bot-view/${weightStyle}/${weight}.png?raw=true`);
 
     // Subweight
     if (!$("input[type='radio'][name='grp-subweight-color']:checked").length)
@@ -38,6 +41,7 @@ function updateRenders() {
         const subweight = $("input[type='radio'][name='grp-subweight-color']:checked").attr("id").replace("subweight-", "");
         $(".configurator-viewer .render-subweight.top-view").attr("src", `https://raw.githubusercontent.com/ShadowProgr/kyuu-configurator/main/assets/top-view/subweight/${subweight}.png?raw=true`);
         $(".configurator-viewer .render-subweight.side-view").attr("src", `https://raw.githubusercontent.com/ShadowProgr/kyuu-configurator/main/assets/side-view/subweight/${subweight}.png?raw=true`);
+        $(".configurator-viewer .render-subweight.bot-view").attr("src", `https://raw.githubusercontent.com/ShadowProgr/kyuu-configurator/main/assets/bot-view/subweight/${subweight}.png?raw=true`);
         $(".configurator-viewer .render-subweight").show();
     } else {
         $(".configurator-viewer .render-subweight").hide();
@@ -49,6 +53,7 @@ function updateRenders() {
     const plate = $("input[type='radio'][name='grp-plate-color']:checked").attr("id").replace("plate-", "");
     $(".configurator-viewer .render-plate.top-view").attr("src", `https://raw.githubusercontent.com/ShadowProgr/kyuu-configurator/main/assets/top-view/plate/${plate}.png?raw=true`);
     $(".configurator-viewer .render-plate.side-view").attr("src", `https://raw.githubusercontent.com/ShadowProgr/kyuu-configurator/main/assets/side-view/plate/${plate}.png?raw=true`);
+    $(".configurator-viewer .render-plate.bot-view").attr("src", `https://raw.githubusercontent.com/ShadowProgr/kyuu-configurator/main/assets/bot-view/plate/${plate}.png?raw=true`);
 };
 
 function isValidSelection() {
