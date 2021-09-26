@@ -21,9 +21,7 @@ body {
 }
 
 .configurator .option-sets {
-    padding: 1rem 1rem 1rem 2.5rem;
-    direction: ltr;
-    background-color: white;
+    padding: 1rem 1rem 0 2.5rem;
 }
 
 .configurator .option-set {
@@ -82,11 +80,17 @@ body {
     max-height: 100vh;
 }
 
+.normal {
+    direction: ltr;
+}
+
 .flipped {
     direction: rtl;
     background-color: white;
     transition: background-color 0.5s;
     transition-timing-function: ease-in-out;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .flipped:hover {
@@ -160,18 +164,18 @@ img {
 .open-form:focus {
     margin-top: 10px;
     cursor: pointer;
-    color: white !important;
+    color: black !important;
     padding: 10px 25px !important;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15) !important;
-    border: 2px solid black !important;
-    background-color: black !important;
+    box-shadow: 0 10px 15px rgba(255, 255, 255, 0.15) !important;
+    border: 2px solid white !important;
+    background-color: white !important;
     text-transform: uppercase;
     font-size: 1rem;
     transition: 0.3s;
 }
 
 .open-form:hover {
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.35) !important;
+    box-shadow: 0 10px 15px rgba(255, 255, 255, 0.35) !important;
 }
 
 .form-popup {
@@ -303,8 +307,26 @@ img {
     background-color: grey;
 }
 
+.bg-white {
+    background-color: white;
+}
+
+.bg-gunmetal {
+    background-color: #313739;
+}
+
 .h-100-vh {
     height: 100vh;
+}
+
+.sticky-bottom {
+    bottom: 0;
+    position: sticky;
+    z-index: 9999;
+}
+
+.tag {
+    border-radius: 25px 25px 0 0;
 }
 
 @media (min-width: 1200px) {
