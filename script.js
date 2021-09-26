@@ -283,7 +283,7 @@ function onGrpLayoutChange() {
 
     // Check if selected Case material is still valid, if not select first valid option
     const selectedSpan = $("input[type='radio'][name='grp-case-material']:checked").parent();
-    selectedSpan.parent().children().promise().done(function () {
+    selectedSpan.parent().children().promise().done(function() {
         if (selectedSpan.filter(":hidden").length > 0) {
             $("input[type='radio'][name='grp-case-material']").parent().filter(":visible").first().find("input").prop("checked", true).change();
         }
@@ -291,7 +291,7 @@ function onGrpLayoutChange() {
 
     // Check if selected Badge material is still valid, if not select first valid option
     const selectedSpan2 = $("input[type='radio'][name='grp-badge-material']:checked").parent();
-    selectedSpan2.parent().children().promise().done(function () {
+    selectedSpan2.parent().children().promise().done(function() {
         if (selectedSpan2.filter(":hidden").length > 0) {
             $("input[type='radio'][name='grp-badge-material']").parent().filter(":visible").first().find("input").prop("checked", true).change();
         }
@@ -299,7 +299,7 @@ function onGrpLayoutChange() {
 
     // Check if selected Badge color is still valid, if not select first valid option
     const selectedSpan3 = $("input[type='radio'][name='grp-badge-color']:checked").parent();
-    selectedSpan3.parent().children().promise().done(function () {
+    selectedSpan3.parent().children().promise().done(function() {
         if (selectedSpan3.filter(":hidden").length > 0) {
             $("input[type='radio'][name='grp-badge-color']").parent().filter(":visible").first().find("input").prop("checked", true).change();
         }
@@ -325,7 +325,7 @@ function onGrpCaseMaterialChange() {
 
     // Check if selected Case color is still valid, if not select first valid option
     const selectedSpan = $("input[type='radio'][name='grp-case-color']:checked").parent();
-    selectedSpan.parent().children().promise().done(function () {
+    selectedSpan.parent().children().promise().done(function() {
         if (selectedSpan.filter(":hidden").length > 0) {
             $("input[type='radio'][name='grp-case-color']").parent().filter(":visible").first().find("input").prop("checked", true).change();
         }
@@ -362,7 +362,7 @@ function onGrpBadgeMaterialChange() {
 
     // Check if selected Badge color is still valid, if not select first valid option
     const selectedSpan = $("input[type='radio'][name='grp-badge-color']:checked").parent();
-    selectedSpan.parent().children().promise().done(function () {
+    selectedSpan.parent().children().promise().done(function() {
         if (selectedSpan.filter(":hidden").length > 0) {
             $("input[type='radio'][name='grp-badge-color']").parent().filter(":visible").first().find("input").prop("checked", true).change();
         }
@@ -387,7 +387,7 @@ function onGrpWeightStyleChange() {
 
     // Check if selected Weight color is still valid, if not select first valid option
     const selectedSpan = $("input[type='radio'][name='grp-weight-color']:checked").parent();
-    selectedSpan.parent().children().promise().done(function () {
+    selectedSpan.parent().children().promise().done(function() {
         if (selectedSpan.filter(":hidden").length > 0) {
             $("input[type='radio'][name='grp-weight-color']").parent().filter(":visible").first().find("input").prop("checked", true).change();
         }
@@ -423,7 +423,7 @@ function onGrpWeightMaterialChange() {
 
     // Check if selected Weight color is still valid, if not select first valid option
     const selectedSpan = $("input[type='radio'][name='grp-weight-color']:checked").parent();
-    selectedSpan.parent().children().promise().done(function () {
+    selectedSpan.parent().children().promise().done(function() {
         if (selectedSpan.filter(":hidden").length > 0) {
             $("input[type='radio'][name='grp-weight-color']").parent().filter(":visible").first().find("input").prop("checked", true).change();
         }
@@ -447,7 +447,7 @@ function onGrpSubweightMaterialChange() {
 
     // Check if selected Sub-weight color is still valid, if not select first valid option
     const selectedSpan = $("input[type='radio'][name='grp-subweight-color']:checked").parent();
-    selectedSpan.parent().children().promise().done(function () {
+    selectedSpan.parent().children().promise().done(function() {
         if (selectedSpan.filter(":hidden").length > 0) {
             $("input[type='radio'][name='grp-subweight-color']").parent().filter(":visible").first().find("input").prop("checked", true).change();
         }
@@ -479,7 +479,7 @@ function onGrpPlateMaterialChange() {
 
     // Check if selected Plate color is still valid, if not select first valid option
     const selectedSpan = $("input[type='radio'][name='grp-plate-color']:checked").parent();
-    selectedSpan.parent().children().promise().done(function () {
+    selectedSpan.parent().children().promise().done(function() {
         if (selectedSpan.filter(":hidden").length > 0) {
             $("input[type='radio'][name='grp-plate-color']").parent().filter(":visible").first().find("input").prop("checked", true).change();
         }
@@ -489,44 +489,44 @@ function onGrpPlateMaterialChange() {
     updatePrice();
 };
 
-$(document).ready(function () {
+$(document).ready(function() {
     $("input[name='grp-layout']").change(onGrpLayoutChange);
     $("input[name='grp-case-material']").change(onGrpCaseMaterialChange);
-    $("input[name='grp-case-color']").change(function () {
+    $("input[name='grp-case-color']").change(function() {
         updateRenders();
         updatePrice();
     });
 
     $("input[name='grp-badge-material']").change(onGrpBadgeMaterialChange);
-    $("input[name='grp-badge-color']").change(function () {
+    $("input[name='grp-badge-color']").change(function() {
         updateRenders();
         updatePrice();
     });
 
     $("input[name='grp-weight-style']").change(onGrpWeightStyleChange);
     $("input[name='grp-weight-material']").change(onGrpWeightMaterialChange);
-    $("input[name='grp-weight-color']").change(function () {
+    $("input[name='grp-weight-color']").change(function() {
         updateRenders();
         updatePrice();
     });
 
     $("input[name='grp-subweight-material']").change(onGrpSubweightMaterialChange);
-    $("input[name='grp-subweight-color']").change(function () {
+    $("input[name='grp-subweight-color']").change(function() {
         updateRenders();
         updatePrice();
     });
 
     $("input[name='grp-plate-material']").change(onGrpPlateMaterialChange);
-    $("input[name='grp-plate-color']").change(function () {
+    $("input[name='grp-plate-color']").change(function() {
         updateRenders();
         updatePrice();
     });
 
-    $("input[name='grp-pcb']").change(function () {
+    $("input[name='grp-pcb']").change(function() {
         updatePrice();
     });
 
-    $("#my-form").submit(function (e) {
+    $("#my-form").submit(function(e) {
         e.preventDefault();
         var vnf_regex = /((09|03|07|08|05)+([0-9]{8})\b)/g;
         if (vnf_regex.test($("#phone").val()) == false) {
@@ -548,12 +548,12 @@ $(document).ready(function () {
                 "entry.924331765": $("#price").val(),
                 "entry.1059748155": $("#config").val(),
             },
-            success: function (result) {
+            success: function(result) {
                 console.log(result);
             },
-            error: function (result) {
+            error: function(result) {
                 console.log(result);
-                $("#form").fadeOut("fast", function () {
+                $("#form").fadeOut("fast", function() {
                     $("#message .price").text($(".price-number").text() + " ₫");
                     $("#message").fadeIn("fast");
                 });
@@ -562,7 +562,7 @@ $(document).ready(function () {
         return false;
     });
 
-    $(".open-form").on("click", function (e) {
+    $(".open-form").on("click", function(e) {
         if (isValidSelection()) {
             $("#name").val("");
             $("#phone").val("");
@@ -575,7 +575,7 @@ $(document).ready(function () {
             const configs = getCurrentConfig();
             let arrConfig = configs.split("<br>").filter(x => x !== "");
             $("#list-price").text("");
-            jQuery.each(prices, function (i, price) {
+            jQuery.each(prices, function(i, price) {
                 $("#list-price").append('<div class="col-8 bg-light-grey p-1">' +
                     '<div class="font-italic">' + arrConfig[i] + '</div>' +
                     '</div>' +
@@ -592,13 +592,31 @@ $(document).ready(function () {
         }
     });
 
-    $("#form .close-form").on("click", function (e) {
+    $("#form .close-form").on("click", function(e) {
         $("#form").fadeOut("fast");
     });
 
-    $("#message .close-form").on("click", function (e) {
+    $("#message .close-form").on("click", function(e) {
         $("#message").fadeOut("fast");
     });
 
     importConfig("BAJAKACSAEAKA");
+
+    $('.showcase .carousel .carousel-item').each(function() {
+        var minPerSlide = 3;
+        var next = $(this).next();
+        if (!next.length) {
+            next = $(this).siblings(':first');
+        }
+        next.children(':first-child').clone().appendTo($(this));
+
+        for (var i = 0; i < minPerSlide; i++) {
+            next = next.next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+
+            next.children(':first-child').clone().appendTo($(this));
+        }
+    });
 });
