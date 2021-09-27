@@ -54,6 +54,7 @@ function updateRenders() {
     $(".configurator-viewer .render-plate.top-view").attr("src", `https://raw.githubusercontent.com/ShadowProgr/kyuu-configurator/main/assets/top-view/plate/${plate}.png?raw=true`);
     $(".configurator-viewer .render-plate.side-view").attr("src", `https://raw.githubusercontent.com/ShadowProgr/kyuu-configurator/main/assets/side-view/plate/${plate}.png?raw=true`);
     $(".configurator-viewer .render-plate.bot-view").attr("src", `https://raw.githubusercontent.com/ShadowProgr/kyuu-configurator/main/assets/bot-view/plate/${plate}.png?raw=true`);
+    console.log(exportConfig());
 };
 
 function isValidSelection() {
@@ -200,7 +201,7 @@ function updatePrice() {
             $("#price-plate").text(p[4].toLocaleString(undefined) + " ₫");
             $("#price-pcb").text(p[5].toLocaleString(undefined) + " ₫");
         }
-        $(".price-number").text(p.reduce((a, b) => a + b).toLocaleString(undefined));
+        $(".price-number").text(p.reduce((a, b) => a + b).toLocaleString(undefined) + " ₫");
     }
 };
 
@@ -608,8 +609,6 @@ $(document).ready(function () {
         $("#info").fadeOut("fast");
     });
 
-    importConfig("BAJAKACSAEAKA");
-
     $('.showcase .carousel .carousel-item').each(function () {
         var minPerSlide = 3;
         var next = $(this).next();
@@ -640,19 +639,120 @@ $(document).ready(function () {
 
         switch (data) {
             case "case":
+                $(".info-content").html(`
+                    <p>
+                        <strong>Các lưu ý: </strong>Lựa chọn chất liệu case sẽ ảnh hướng đến cân nặng và chất âm của bàn phím. Case
+                        nhựa thường có chất âm đục và trầm hơn so với vỏ kim loại có chất âm vang và đanh. Case đồng sẽ bị oxy hóa
+                        theo thời gian và tạo thành một lớp patina trên bề mặt. Vật liệu được sử dụng là Nhôm 6061 và Đồng 110.
+                    </p>
+            
+                    <div><strong>Xử lý bề mặt:</strong></div>
+                    <div><i>Aluminum - Màu: </i><span>Bắn cát và sơn điện ly hoặc anode</span></div>
+                    <div><i>Aluminum - Raw: </i><span>Clear anode (không bắn cát, giữ vân CNC trên bề mặt nhôm)</span>
+                    </div>
+                    <div><i>Polycarbonate - Frosted: </i><span>Bắn cát</span></div>
+                    <div><i>Polycarbonate - Màu: </i><span>Nhuộm màu và bắn cát</span></div>
+                    <div><i>Copper: </i><span>Bắn cát hoặc đánh bóng</span></div>
+                    <br />
+                    <div><strong>Trọng lượng ước tính:</strong></div>
+                    <div><i>Aluminum: </i><span>650g</span></div>
+                    <div><i>Polycarbonate: </i><span>300g</span></div>
+                    <div><i>Copper: </i><span>2100g</span></div>
+                `);
                 break;
             case "badge":
+                $(".info-content").html(`
+                    <p>
+                        <strong>Các lưu ý: </strong>Lựa chọn các badge khác nhau sẽ không ảnh hưởng đến chất âm và cảm giác gõ của
+                        bàn phím. Ngoài việc có ngoại hình khác nhau các badge sẽ chênh nhau một ít về trọng lượng.
+                    </p>
+            
+                    <div><strong>Xử lý bề mặt:</strong></div>
+                    <div><i>Aluminum - Màu: </i><span>Bắn cát và sơn điện ly hoặc anode</span></div>
+                    <div><i>Aluminum - Raw: </i><span>Clear anode (không bắn cát, giữ vân CNC trên bề mặt nhôm)</span>
+                    </div>
+                    <div><i>Polycarbonate - Frosted: </i><span>Bắn cát</span></div>
+                    <div><i>Polycarbonate - Màu: </i><span>Nhuộm màu và bắn cát</span></div>
+                    <div><i>Brass: </i><span>Bắn cát hoặc PVD</span></div>
+                    <div><i>Copper: </i><span>Bắn cát hoặc đánh bóng</span></div>
+                    <div><i>Stainless Steel: </i><span>Đánh bóng</span></div>
+                    <br />
+                    <p>
+                        <strong>Trọng lượng ước tính: </strong>từ 1g tới 10g.
+                    </p>
+                `);
                 break;
             case "weight":
-                break;
-            case "sub-weight":
+                $(".info-content").html(`
+                    <p>
+                        <strong>Các lưu ý: </strong>Lựa chọn chất liệu weight sẽ ảnh hướng đến cân nặng và chất âm của bàn phím.
+                        Weight nặng sẽ giúp âm thanh bớt bị vọng lại.
+                    </p>
+            
+                    <div><strong>Xử lý bề mặt:</strong></div>
+                    <div><i>Aluminum - Màu: </i><span>Bắn cát và sơn điện ly hoặc anode</span></div>
+                    <div><i>Aluminum - Raw: </i><span>Clear anode (không bắn cát, giữ vân CNC trên bề mặt nhôm)</span>
+                    </div>
+                    <div><i>Polycarbonate - Frosted: </i><span>Bắn cát</span></div>
+                    <div><i>Polycarbonate - Màu: </i><span>Nhuộm màu và bắn cát</span></div>
+                    <div><i>Brass: </i><span>Bắn cát hoặc PVD</span></div>
+                    <div><i>Copper: </i><span>Bắn cát hoặc đánh bóng</span></div>
+                    <div><i>Stainless Steel: </i><span>Đánh bóng</span></div>
+                    <br />
+                    <div><strong>Trọng lượng ước tính:</strong></div>
+                    <div><i>Aluminum: </i><span>300g</span></div>
+                    <div><i>Polycarbonate: </i><span>150g</span></div>
+                    <div><i>Brass: </i><span>900g</span></div>
+                    <div><i>Copper: </i><span>1000g</span></div>
+                    <div><i>Stainless Steel: </i><span>850g</span></div>
+                `);
                 break;
             case "plate":
+                $(".info-content").html(`
+                    <p>
+                        <strong>Các lưu ý: </strong>Lựa chọn chất liệu plate sẽ ảnh hường lớn đến cảm giác gõ và âm thanh. Các plate
+                        mềm sẽ mang đến trải nghiệm gõ mềm mại khi bottom out, ngược lại các plate cứng sẽ mang lại cảm giác chắc
+                        chắn trong mỗi lần bấm. Các plate phi kim thường có chất âm đục và trầm hơn so với plate kim loại có chất âm
+                        vang và đanh.
+                    </p>
+            
+                    <p>
+                        <strong>Các chất liều xếp theo độ cứng tăng dần: </strong>POM, Polycarbonate, Aluminum, Copper và Brass.
+                    </p>
+            
+                    <div><strong>Xử lý bề mặt:</strong></div>
+                    <div><i>Aluminum - Màu: </i><span>Bắn cát và sơn điện ly hoặc anode</span></div>
+                    <div><i>Aluminum - Raw: </i><span>Clear anode (không bắn cát, giữ vân CNC trên bề mặt nhôm)</span>
+                    </div>
+                    <div><i>Polycarbonate - Frosted: </i><span>Bắn cát</span></div>
+                    <div><i>Polycarbonate - Màu: </i><span>Nhuộm màu và bắn cát</span></div>
+                    <div><i>POM: </i><span>Làm mịn</span></div>
+                    <div><i>Brass: </i><span>Bắn cát hoặc PVD</span></div>
+                    <div><i>Copper: </i><span>Bắn cát hoặc đánh bóng</span></div>
+                    <br />
+                    <div><strong>Trọng lượng ước tính:</strong></div>
+                    <div><i>Aluminum: </i><span>85g</span></div>
+                    <div><i>Polycarbonate: </i><span>40g</span></div>
+                    <div><i>POM: </i><span>45g</span></div>
+                    <div><i>Brass: </i><span>270g</span></div>
+                    <div><i>Copper: </i><span>280g</span></div>
+                `);
                 break;
             case "pcb":
+                $(".info-content").html(`
+                    <p>
+                        <strong>Các lưu ý: </strong>Có 2 lựa chọn PCB là mạch hàn <i>Mechlovin' 9</i> và mạch hotswap <i>Hermit
+                            Ape</i>. Mạch hotswap sẽ có một bóng LED RGB ở vị trí badge. Mạch hàn sẽ hỗ trợ stepped capslock và split
+                        backspace.
+                    </p>
+        
+                    <img src="assets/pcb.jpg" />
+                `);
                 break;
         }
 
         $("#info").fadeIn("fast");
-    })
+    });
+
+    importConfig("AACABAABAEABA");
 });
