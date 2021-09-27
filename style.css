@@ -442,13 +442,13 @@ img {
 }
 
 .info-button {
-    background-color: transparent;
-    border: 0;
-    outline: 0!important;
+  background-color: transparent;
+  border: 0;
+  outline: 0 !important;
 }
 
 .config-output {
-    position: absolute;
-    top: 25%;
-    transform: translateY(-25%);
+  position: absolute;
+  top: 25%;
+  transform: translateY(-25%);
 }
