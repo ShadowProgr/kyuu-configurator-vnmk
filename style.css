@@ -438,7 +438,7 @@ img {
 }
 
 .showcase .carousel-inner .col-3 img {
-  border: 1px solid black;
+  cursor: pointer;
 }
 
 .info-button {
