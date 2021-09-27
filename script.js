@@ -253,18 +253,23 @@ function exportConfig() {
 };
 
 function importConfig(config) {
-    $("input[name='grp-layout']").eq(config.charCodeAt(0) - 65).prop("checked", true).change();
-    $("input[name='grp-case-material']").eq(config.charCodeAt(1) - 65).prop("checked", true).change();
-    $("input[name='grp-case-color']").eq(config.charCodeAt(2) - 65).prop("checked", true).change();
-    $("input[name='grp-badge-material']").eq(config.charCodeAt(3) - 65).prop("checked", true).change();
-    $("input[name='grp-badge-color']").eq(config.charCodeAt(4) - 65).prop("checked", true).change();
-    $("input[name='grp-weight-style']").eq(config.charCodeAt(5) - 65).prop("checked", true).change();
-    $("input[name='grp-weight-material']").eq(config.charCodeAt(6) - 65).prop("checked", true).change();
-    $("input[name='grp-weight-color']").eq(config.charCodeAt(7) - 65).prop("checked", true).change();
-    $("input[name='grp-subweight-material']").eq(config.charCodeAt(8) - 65).prop("checked", true).change();
-    $("input[name='grp-subweight-color']").eq(config.charCodeAt(9) - 65).prop("checked", true).change();
-    $("input[name='grp-plate-material']").eq(config.charCodeAt(10) - 65).prop("checked", true).change();
     $("input[name='grp-plate-color']").eq(config.charCodeAt(11) - 65).prop("checked", true).change();
+    $("input[name='grp-plate-material']").eq(config.charCodeAt(10) - 65).prop("checked", true).change();
+
+    $("input[name='grp-subweight-color']").eq(config.charCodeAt(9) - 65).prop("checked", true).change();
+    $("input[name='grp-subweight-material']").eq(config.charCodeAt(8) - 65).prop("checked", true).change();
+
+    $("input[name='grp-weight-color']").eq(config.charCodeAt(7) - 65).prop("checked", true).change();
+    $("input[name='grp-weight-material']").eq(config.charCodeAt(6) - 65).prop("checked", true).change();
+    $("input[name='grp-weight-style']").eq(config.charCodeAt(5) - 65).prop("checked", true).change();
+
+    $("input[name='grp-badge-color']").eq(config.charCodeAt(4) - 65).prop("checked", true).change();
+    $("input[name='grp-badge-material']").eq(config.charCodeAt(3) - 65).prop("checked", true).change();
+
+    $("input[name='grp-case-color']").eq(config.charCodeAt(2) - 65).prop("checked", true).change();
+    $("input[name='grp-case-material']").eq(config.charCodeAt(1) - 65).prop("checked", true).change();
+    $("input[name='grp-layout']").eq(config.charCodeAt(0) - 65).prop("checked", true).change();
+
     $("input[name='grp-pcb']").eq(config.charCodeAt(12) - 65).prop("checked", true).change();
 };
 
@@ -754,9 +759,10 @@ $(document).ready(function () {
         $("#info").fadeIn("fast");
     });
 
-    $(".load-config").click(function() {
-        let name = $(this).data("name");
-        console.log(name);
+    $(".load-config").click(function () {
+        const name = $(this).data("name");
+        $("#showcase").fadeOut("fast");
+        importConfig(name);
     })
 
     importConfig("AACABAABAEABA");
