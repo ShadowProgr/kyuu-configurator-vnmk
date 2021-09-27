@@ -754,5 +754,10 @@ $(document).ready(function () {
         $("#info").fadeIn("fast");
     });
 
+    $(".load-config").click(function() {
+        let name = $(this).data("name");
+        console.log(name);
+    })
+
     importConfig("AACABAABAEABA");
 });

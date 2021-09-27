@@ -188,6 +188,7 @@ img {
   border: 2px solid black !important;
   background-color: black !important;
   text-transform: uppercase;
+  z-index: 99999;
 }
 
 .load-config:hover {
@@ -222,7 +223,37 @@ img {
 }
 
 #showcase .form-wrapper {
-  max-width: 70vw;
+  max-width: 80vw;
+}
+
+@media (min-aspect-ratio: 4/3) {
+  #showcase .form-wrapper {
+    max-width: 80vw;
+  }
+}
+
+@media (min-aspect-ratio: 16/10) {
+  #showcase .form-wrapper {
+    max-width: 60vw;
+  }
+}
+
+@media (min-aspect-ratio: 16/9) {
+  #showcase .form-wrapper {
+    max-width: 60vw;
+  }
+}
+
+@media (min-aspect-ratio: 21/9) {
+  #showcase .form-wrapper {
+    max-width: 50vw;
+  }
+}
+
+@media (min-aspect-ratio: 32/9) {
+  #showcase .form-wrapper {
+    max-width: 35vw;
+  }
 }
 
 .form-title {
