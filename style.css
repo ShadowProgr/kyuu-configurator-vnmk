@@ -153,10 +153,26 @@ img {
   height: auto;
 }
 
+#carouselExampleIndicators .carousel-control-next span,
+#carouselExampleIndicators .carousel-control-prev span,
+#showcase .carousel-control-next span,
+#showcase .carousel-control-prev span {
+  width: 30px;
+  height: 30px;
+}
+
 .carousel-control-next,
 .carousel-control-prev,
 .carousel-indicators {
-  filter: invert(100%);
+  opacity: 1;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 -1 8 10'><path stroke='%23000' d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/></svg>");
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 -1 8 10'><path stroke='%23000' d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/></svg>");
 }
 
 .btn,
