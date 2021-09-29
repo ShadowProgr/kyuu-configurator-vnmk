@@ -590,7 +590,7 @@ $(document).ready(function () {
                     '</div>')
             });
 
-            $("#price").val($(".price-number").text());
+            $("#price").val(prices.reduce((a, b) => a + b));
             $("#config").val(configs);
             $("#form").fadeIn("fast");
         } else {
