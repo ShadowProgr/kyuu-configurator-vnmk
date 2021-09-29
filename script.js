@@ -560,7 +560,7 @@ $(document).ready(function () {
             error: function (result) {
                 console.log(result);
                 $("#form").fadeOut("fast", function () {
-                    $("#message .price").text($(".price-number").text() + " ₫");
+                    $("#message .price").text($(".price-number").text());
                     $("#message").fadeIn("fast");
                 });
             }
